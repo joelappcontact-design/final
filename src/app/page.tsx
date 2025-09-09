@@ -11,7 +11,7 @@ import { config, formatPrice } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { PriceCard as PriceCardType, Testimonial, FAQ as FAQType } from '@/types';
 
-// Données des prix
+// NOUVEAUX PRIX - DIVISÉS PAR 2,5 - MISE À JOUR VERCEL
 const pricingData: PriceCardType[] = [
   {
     id: 'simple-opening',

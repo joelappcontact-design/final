@@ -43,12 +43,12 @@ export const config = {
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "123 Rue de la Paix, 75001 Paris",
   },
 
-  // Tarifs (en centimes d'euros) - divisés par 2,5
+  // Tarifs (en centimes d'euros) - NOUVEAUX PRIX DIVISÉS PAR 2,5
   pricing: {
-    simpleOpening: parseInt(process.env.NEXT_PUBLIC_PRICE_SIMPLE_OPENING || "5160"), // 129€ / 2,5 = 51,6€
-    complexOpening: parseInt(process.env.NEXT_PUBLIC_PRICE_COMPLEX_OPENING || "7560"), // 189€ / 2,5 = 75,6€
-    cylinderChange: parseInt(process.env.NEXT_PUBLIC_PRICE_CYLINDER_CHANGE || "3560"), // 89€ / 2,5 = 35,6€
-    secureDoor: parseInt(process.env.NEXT_PUBLIC_PRICE_SECURE_DOOR || "11960"), // 299€ / 2,5 = 119,6€
+    simpleOpening: parseInt(process.env.NEXT_PUBLIC_PRICE_SIMPLE_OPENING || "5160"), // 129€ / 2,5 = 52€
+    complexOpening: parseInt(process.env.NEXT_PUBLIC_PRICE_COMPLEX_OPENING || "7560"), // 189€ / 2,5 = 76€
+    cylinderChange: parseInt(process.env.NEXT_PUBLIC_PRICE_CYLINDER_CHANGE || "3560"), // 89€ / 2,5 = 36€
+    secureDoor: parseInt(process.env.NEXT_PUBLIC_PRICE_SECURE_DOOR || "11960"), // 299€ / 2,5 = 120€
   },
 
   // Frais de déplacement
