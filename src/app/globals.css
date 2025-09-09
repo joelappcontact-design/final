@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-purple-600 via-purple-700 to-blue-600 min-h-screen;
+    background-attachment: fixed;
+  }
+  
+  /* Amélioration de l'accessibilité */
+  :focus-visible {
+    @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+  }
+  
+  /* Amélioration des contrastes pour les textes */
+  .text-white {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/15 hover:border-white/30;
+  }
+  
+  /* Boutons avec effet de survol amélioré */
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-semibold rounded-2xl transition-all duration-300 hover:from-yellow-300 hover:to-yellow-400 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-yellow-400/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/20 backdrop-blur-sm text-white border border-white/30 font-semibold rounded-2xl transition-all duration-300 hover:bg-white/30 hover:border-white/50 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-white/50;
+  }
+  
+  /* Cartes avec effet glassmorphism */
+  .card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:scale-105 hover:shadow-xl;
+  }
+  
+  /* Animations personnalisées */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+  
+  /* Sticky CTA pour mobile */
+  .sticky-cta {
+    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
+  }
+  
+  /* Amélioration des touch targets pour mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+@layer utilities {
+  /* Utilitaires pour les dégradés */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #6B4EFF 0%, #0EA5E9 100%);
+  }
+  
+  .bg-gradient-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  
+  /* Ombres personnalisées */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Text shadow pour améliorer la lisibilité */
+  .text-shadow {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Animations keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Amélioration de l'accessibilité pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus visible pour les éléments interactifs */
+.focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+}
+
+/* Amélioration des contrastes pour les liens */
+a:focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600 rounded-lg;
+}
+
+/* Styles pour les formulaires */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+}
+
+/* Amélioration de la performance avec will-change */
+.hover-scale {
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Styles pour les éléments sticky */
+.sticky-header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Optimisation pour les écrans haute résolution */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .text-shadow {
+    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.1);
+  }
+}
