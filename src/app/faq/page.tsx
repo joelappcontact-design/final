@@ -32,12 +32,6 @@ const faqData: FAQType[] = [
     category: 'service',
   },
   {
-    id: 'faq-2',
-    question: 'Comment sont calculés les prix ?',
-    answer: 'Nos prix sont fixes et transparents, affichés clairement sur notre site. Le prix affiché est le prix payé, sans surprise. Les frais de déplacement sont inclus dans le tarif de base. Aucun supplément ne sera demandé en fin d\'intervention.',
-    category: 'pricing',
-  },
-  {
     id: 'faq-3',
     question: 'Puis-je payer par carte ?',
     answer: 'Oui, nous acceptons tous les modes de paiement : carte bancaire, espèces, virement bancaire et chèque. La facture est envoyée automatiquement par email après l\'intervention. Vous recevrez également un reçu papier si vous le souhaitez.',

@@ -48,12 +48,6 @@ const faqData: FAQType[] = [
     category: 'service',
   },
   {
-    id: 'faq-2',
-    question: 'Comment sont calculés les prix ?',
-    answer: 'Nos prix sont fixes et transparents. Le prix affiché est le prix payé, sans surprise. Les frais de déplacement sont inclus dans le tarif.',
-    category: 'pricing',
-  },
-  {
     id: 'faq-3',
     question: 'Puis-je payer par carte ?',
     answer: 'Oui, nous acceptons tous les modes de paiement : carte bancaire, espèces, virement. La facture est envoyée automatiquement par email.',
@@ -130,17 +124,7 @@ export default function HomePage() {
             Pourquoi nous choisir ?
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <CheckCircle size={32} className="text-gray-900" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Intervention rapide</h3>
-              <p className="text-white/80 text-sm">
-                {config.content.trust.priceTransparency}
-              </p>
-            </div>
-            
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card text-center">
               <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Clock size={32} className="text-gray-900" />
