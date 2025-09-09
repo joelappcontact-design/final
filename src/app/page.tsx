@@ -3,54 +3,13 @@
 import { useEffect } from 'react';
 import { Clock, Shield, Star, CheckCircle, MapPin, Phone, MessageCircle } from 'lucide-react';
 import CallCTA from '@/components/CallCTA';
-import PriceCard from '@/components/PriceCard';
 import CityGrid from '@/components/CityGrid';
 import FAQ from '@/components/FAQ';
 import TestimonialCard from '@/components/TestimonialCard';
-import { config, formatPrice } from '@/lib/config';
+import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
-import { PriceCard as PriceCardType, Testimonial, FAQ as FAQType } from '@/types';
+import { Testimonial, FAQ as FAQType } from '@/types';
 
-// NOUVEAUX PRIX - DIVISÉS PAR 2,5 - MISE À JOUR VERCEL - TIMESTAMP: 2024-09-09-22-30
-const pricingData: PriceCardType[] = [
-  {
-    id: 'simple-opening',
-    title: 'Ouverture simple',
-    price: config.pricing.simpleOpening,
-    description: 'Porte standard sans dégâts',
-    features: [
-      'Intervention rapide',
-      'Aucun dégât',
-      'Devis gratuit',
-      'Facture automatique'
-    ],
-    popular: true,
-  },
-  {
-    id: 'complex-opening',
-    title: 'Ouverture complexe',
-    price: config.pricing.complexOpening,
-    description: 'Porte sécurisée ou blindée',
-    features: [
-      'Techniques avancées',
-      'Matériel spécialisé',
-      'Devis gratuit',
-      'Garantie intervention'
-    ],
-  },
-  {
-    id: 'cylinder-change',
-    title: 'Changement cylindre',
-    price: config.pricing.cylinderChange,
-    description: 'Remplacement de cylindre',
-    features: [
-      'Cylindre de qualité',
-      'Installation incluse',
-      'Devis gratuit',
-      'Clés fournies'
-    ],
-  },
-];
 
 // Témoignages clients
 const testimonials: Testimonial[] = [
@@ -215,38 +174,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Tarifs clairs */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
-            Tarifs clairs et transparents
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingData.map((price) => (
-              <PriceCard key={price.id} price={price} />
-            ))}
-          </div>
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/tarifs" 
-              className="btn-secondary px-8 py-3 inline-flex items-center gap-2"
-            >
-              Voir tous les tarifs
-            </a>
-          </div>
-          
-          <div className="text-center mt-6">
-            <p className="text-white/70 text-sm">
-              {config.travelFeeIncluded 
-                ? 'Frais de déplacement inclus dans tous les tarifs' 
-                : 'Frais de déplacement en sus selon la distance'
-              }
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Zones couvertes */}
       <section className="py-16 px-4">
