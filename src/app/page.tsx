@@ -65,12 +65,7 @@ const faqData: FAQType[] = [
     answer: 'Tous nos artisans sont certifiés, vérifiés et assurés. Nous effectuons des vérifications régulières de leurs compétences.',
     category: 'general',
   },
-  {
-    id: 'faq-6',
-    question: 'Que faire en cas d\'arnaque ?',
-    answer: 'Nos prix sont fixes et affichés à l\'avance. Pas de cash imposé, facture automatique. En cas de problème, contactez-nous immédiatement.',
-    category: 'general',
-  },
+  
 ];
 
 export default function HomePage() {
@@ -145,14 +140,11 @@ export default function HomePage() {
               </p>
             </div>
             
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Star size={32} className="text-gray-900" />
+            <div className="card text-center bg-yellow-400 border border-yellow-300">
+              <div className="px-6 py-8 rounded-2xl">
+                <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Ouverture de porte</h3>
+                <p className="text-3xl md:text-4xl font-black text-gray-900">à partir de 39€</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Transparence totale</h3>
-              <p className="text-white/80 text-sm">
-                {config.content.trust.antiFraud}
-              </p>
             </div>
           </div>
         </div>
@@ -182,6 +174,20 @@ export default function HomePage() {
               <MapPin size={20} />
               Voir toutes les zones
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Nos partenaires */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
+            Nos partenaires
+          </h2>
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
+            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Heracles</span>
+            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Vachette</span>
+            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Bricard</span>
           </div>
         </div>
       </section>

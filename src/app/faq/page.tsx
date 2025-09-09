@@ -49,12 +49,7 @@ const faqData: FAQType[] = [
     answer: 'Tous nos artisans sont certifiés, vérifiés et assurés. Nous effectuons des vérifications régulières de leurs compétences et de leur réputation. Chaque intervention est couverte par notre assurance responsabilité civile.',
     category: 'general',
   },
-  {
-    id: 'faq-6',
-    question: 'Que faire en cas d\'arnaque ?',
-    answer: 'Nos prix sont fixes et affichés à l\'avance. Pas de cash imposé, facture automatique. En cas de problème, contactez-nous immédiatement. Nous avons une politique de remboursement si l\'intervention ne correspond pas à nos standards.',
-    category: 'general',
-  },
+  
   {
     id: 'faq-7',
     question: 'Proposez-vous une garantie ?',
