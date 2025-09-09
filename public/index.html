@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serrurier d'urgence - Test</title>
+    <title>Serrurier d'urgence - Redirection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,14 +37,27 @@
             border-radius: 10px;
             margin: 20px 0;
         }
+        .loading {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
     </style>
+    <script>
+        // Redirection automatique vers l'application Next.js
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 2000);
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>🔧 Serrurier d'urgence</h1>
         <div class="status">
-            <h2>✅ Site en ligne !</h2>
-            <p>Le déploiement Vercel fonctionne correctement.</p>
+            <h2>🔄 Redirection en cours...</h2>
+            <p>Chargement de l'application principale...</p>
+        </div>
+        <div class="loading">
+            Si la redirection ne fonctionne pas, <a href="/" style="color: #FFD54A;">cliquez ici</a>
         </div>
         <a href="tel:+33123456789" class="phone">📞 Appeler maintenant</a>
         <p>Intervention 24h/24 - Paris et région</p>
