@@ -13,7 +13,7 @@ export const config = {
 
   // USP (Unique Selling Propositions)
   usp: {
-    price: process.env.NEXT_PUBLIC_USP_1 || "Prix clairs et transparents",
+    price: process.env.NEXT_PUBLIC_USP_1 || "Intervention rapide",
     instantQuote: process.env.NEXT_PUBLIC_USP_2 || "Devis instantané par photo (bientôt)",
     fastService: process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés",
   },
@@ -64,7 +64,7 @@ export const config = {
   content: {
     hero: {
       title: `Serrurier d'urgence à ${process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris"}, ${process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7"}`,
-      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Prix clairs et transparents"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
+      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Intervention rapide"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
     },
     trust: {
       antiFraud: "Pas de cash imposé, facture envoyée automatiquement.",

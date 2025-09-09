@@ -18,7 +18,7 @@ export default function Footer() {
             
             <p className="text-gray-300 mb-6 max-w-md">
               Serrurier d'urgence {config.primaryCity} - Intervention 24h/24, 7j/7. 
-              Prix clairs et transparents, artisans vérifiés.
+              Intervention rapide, artisans vérifiés.
             </p>
             
             {/* Contact principal */}

@@ -21,7 +21,7 @@ const pricingData: PriceCardType[] = [
     features: [
       'Intervention rapide',
       'Aucun dégât',
-      'Prix clair affiché',
+      'Devis gratuit',
       'Facture automatique'
     ],
     popular: true,
@@ -34,7 +34,7 @@ const pricingData: PriceCardType[] = [
     features: [
       'Techniques avancées',
       'Matériel spécialisé',
-      'Prix clair affiché',
+      'Devis gratuit',
       'Garantie intervention'
     ],
   },
@@ -46,7 +46,7 @@ const pricingData: PriceCardType[] = [
     features: [
       'Cylindre de qualité',
       'Installation incluse',
-      'Prix clair affiché',
+      'Devis gratuit',
       'Clés fournies'
     ],
   },
@@ -66,7 +66,7 @@ const testimonials: Testimonial[] = [
     id: 'testimonial-2',
     name: 'Jean-Pierre M.',
     rating: 5,
-    comment: 'Artisan très professionnel, prix transparent dès le début. Plus de peur des arnaques avec ces serruriers !',
+    comment: 'Artisan très professionnel, intervention rapide et efficace. Plus de peur des arnaques avec ces serruriers !',
     location: 'Neuilly-sur-Seine',
     date: 'Il y a 1 semaine',
   },
@@ -150,7 +150,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 text-white/80">
               <CheckCircle size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium">Prix clairs</span>
+              <span className="text-sm font-medium">Intervention rapide</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-white/80">
               <Clock size={20} className="text-yellow-400" />
@@ -176,7 +176,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <CheckCircle size={32} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Prix clairs</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Intervention rapide</h3>
               <p className="text-white/80 text-sm">
                 {config.content.trust.priceTransparency}
               </p>
