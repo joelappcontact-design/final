@@ -11,7 +11,7 @@ import { config, formatPrice } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { PriceCard as PriceCardType, Testimonial, FAQ as FAQType } from '@/types';
 
-// NOUVEAUX PRIX - DIVISÉS PAR 2,5 - MISE À JOUR VERCEL
+// NOUVEAUX PRIX - DIVISÉS PAR 2,5 - MISE À JOUR VERCEL - TIMESTAMP: 2024-09-09-22-30
 const pricingData: PriceCardType[] = [
   {
     id: 'simple-opening',
