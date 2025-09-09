@@ -6,19 +6,19 @@ import { config, formatPrice } from '@/lib/config';
 import { PriceCard as PriceCardType } from '@/types';
 
 export const metadata: Metadata = {
-  title: 'Tarifs serrurier d\'urgence - Prix fixes et transparents',
-  description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix fixes et transparents pour ouverture de porte, changement de cylindre, installation de porte sécurisée.`,
+  title: 'Tarifs serrurier d\'urgence - Prix clairs et transparents',
+  description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix clairs et transparents pour ouverture de porte, changement de cylindre, installation de porte sécurisée.`,
   keywords: [
     'tarifs serrurier',
     'prix ouverture porte',
     'changement cylindre prix',
     'serrurier pas cher',
-    'prix fixe serrurier',
+    'prix clair serrurier',
     'devis serrurier gratuit'
   ],
   openGraph: {
-    title: 'Tarifs serrurier d\'urgence - Prix fixes et transparents',
-    description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix fixes et transparents pour tous nos services.`,
+    title: 'Tarifs serrurier d\'urgence - Prix clairs et transparents',
+    description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix clairs et transparents pour tous nos services.`,
   },
 };
 
@@ -32,7 +32,7 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Intervention rapide',
       'Aucun dégât garanti',
-      'Prix fixe affiché',
+      'Prix clair affiché',
       'Facture automatique',
       'Garantie 30 jours'
     ],
@@ -46,7 +46,7 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Techniques avancées',
       'Matériel spécialisé',
-      'Prix fixe affiché',
+      'Prix clair affiché',
       'Garantie intervention',
       'Rapport détaillé'
     ],
@@ -59,7 +59,7 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Cylindre de qualité',
       'Installation incluse',
-      'Prix fixe affiché',
+      'Prix clair affiché',
       'Clés fournies (3 exemplaires)',
       'Garantie 1 an'
     ],
@@ -72,7 +72,7 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Porte blindée A2P3',
       'Installation complète',
-      'Prix fixe affiché',
+      'Prix clair affiché',
       'Clés et serrures incluses',
       'Garantie 2 ans'
     ],
@@ -90,14 +90,14 @@ export default function TarifsPage() {
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto text-shadow">
-            Prix fixes et transparents - Pas de surprise, le prix affiché est le prix payé
+            Prix clairs et transparents - Pas de surprise, le prix affiché est le prix payé
           </p>
           
           <CallCTA variant="primary" size="lg" showWhatsApp={true} />
         </div>
       </section>
 
-      {/* Avantages prix fixes */}
+      {/* Avantages prix clairs */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -105,7 +105,7 @@ export default function TarifsPage() {
               <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <CheckCircle size={32} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Prix fixes</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Prix clairs</h3>
               <p className="text-white/80 text-sm">
                 Aucune surprise, le prix affiché est le prix payé
               </p>

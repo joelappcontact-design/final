@@ -5,7 +5,7 @@
 
 export const config = {
   // Informations générales
-  siteName: process.env.NEXT_PUBLIC_SITE_NAME || "Serrurier Joël",
+  siteName: process.env.NEXT_PUBLIC_SITE_NAME || "Serrurier d'urgence",
   phone: process.env.NEXT_PUBLIC_PHONE || "+33 1 23 45 67 89",
   primaryCity: process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris",
   serviceHours: process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7",
@@ -13,7 +13,7 @@ export const config = {
 
   // USP (Unique Selling Propositions)
   usp: {
-    price: process.env.NEXT_PUBLIC_USP_1 || "Prix fixes et clairs",
+    price: process.env.NEXT_PUBLIC_USP_1 || "Prix clairs et transparents",
     instantQuote: process.env.NEXT_PUBLIC_USP_2 || "Devis instantané par photo (bientôt)",
     fastService: process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés",
   },
@@ -39,7 +39,7 @@ export const config = {
   // Informations légales
   legal: {
     siren: process.env.NEXT_PUBLIC_COMPANY_SIREN || "123456789",
-    email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@serrurier-joel.fr",
+    email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@serrurier-urgence.fr",
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "123 Rue de la Paix, 75001 Paris",
   },
 
@@ -64,7 +64,7 @@ export const config = {
   content: {
     hero: {
       title: `Serrurier d'urgence à ${process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris"}, ${process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7"}`,
-      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Prix fixes et clairs"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
+      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Prix clairs et transparents"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
     },
     trust: {
       antiFraud: "Pas de cash imposé, facture envoyée automatiquement.",
@@ -76,7 +76,7 @@ export const config = {
 
 // Fonction utilitaire pour formater les prix
 export const formatPrice = (priceInCents: number): string => {
-  return `${(priceInCents / 100).toFixed(0)}€ TTC`;
+  return `à partir de ${(priceInCents / 100).toFixed(0)}€ TTC`;
 };
 
 // Fonction pour obtenir le numéro de téléphone formaté

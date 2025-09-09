@@ -46,7 +46,7 @@ export default function PriceCard({ price, className = '' }: PriceCardProps) {
       
       <div className="text-center">
         <div className="text-xs text-white/70 mb-2">
-          {price.popular ? 'Prix fixe - Pas de surprise' : 'Devis gratuit'}
+          {price.popular ? 'Prix clair - Pas de surprise' : 'Devis gratuit'}
         </div>
       </div>
     </div>

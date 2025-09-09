@@ -78,7 +78,7 @@ export default function ZonesPage() {
                 <ul className="space-y-2 text-white/80">
                   <li>• Mêmes tarifs dans toutes les zones</li>
                   <li>• Frais de déplacement inclus</li>
-                  <li>• Prix fixes et transparents</li>
+                  <li>• Prix clairs et transparents</li>
                   <li>• Aucun supplément de zone</li>
                 </ul>
               </div>

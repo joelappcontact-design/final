@@ -6,7 +6,7 @@ export default function SchemaLocalBusiness() {
     '@context': 'https://schema.org',
     '@type': 'Locksmith',
     name: config.siteName,
-    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix fixes et transparents, artisans vérifiés.`,
+    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix clairs et transparents, artisans vérifiés.`,
     url: process.env.NEXT_PUBLIC_SITE_URL || 'https://serrurier-joel.fr',
     telephone: config.phone,
     email: config.legal.email,

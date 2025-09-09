@@ -4,7 +4,7 @@ import { config } from '@/lib/config';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: config.siteName,
-    short_name: 'Serrurier Joël',
+    short_name: 'Serrurier Urgence',
     description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7`,
     start_url: '/',
     display: 'standalone',

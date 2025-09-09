@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     default: `${config.siteName} - Serrurier d'urgence ${config.primaryCity} 24h/24`,
     template: `%s | ${config.siteName}`,
   },
-  description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix fixes et transparents, artisans vérifiés. Intervention en ${config.slaMinutes}.`,
+  description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix clairs et transparents, artisans vérifiés. Intervention en ${config.slaMinutes}.`,
   keywords: [
     'serrurier urgence',
     'serrurier paris',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     'serrurier 24h',
     'dépannage serrure',
     'artisan serrurier',
-    'prix fixe serrurier'
+    'prix clair serrurier'
   ],
   authors: [{ name: config.siteName }],
   creator: config.siteName,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: '/',
     title: `${config.siteName} - Serrurier d'urgence ${config.primaryCity} 24h/24`,
-    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix fixes et transparents, artisans vérifiés.`,
+    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix clairs et transparents, artisans vérifiés.`,
     siteName: config.siteName,
     images: [
       {
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: `${config.siteName} - Serrurier d'urgence ${config.primaryCity} 24h/24`,
-    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix fixes et transparents.`,
+    description: `Serrurier d'urgence ${config.primaryCity} - Intervention 24h/24, 7j/7. Prix clairs et transparents.`,
     images: ['/og-image.jpg'],
   },
   robots: {
