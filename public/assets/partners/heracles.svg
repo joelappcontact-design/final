@@ -1,0 +1,35 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond blanc -->
+  <rect width="160" height="80" rx="8" fill="white"/>
+  
+  <!-- Texte principal HERACLES avec effet métallique -->
+  <defs>
+    <linearGradient id="heraclesGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066CC;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#004499;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002266;stop-opacity:1" />
+    </linearGradient>
+    <filter id="emboss">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+      <feSpecularLighting result="specOut" in="blur" specularConstant="1.5" specularExponent="20" lighting-color="white">
+        <fePointLight x="0" y="0" z="200"/>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut"/>
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+  </defs>
+  
+  <!-- Texte HERACLES principal -->
+  <text x="80" y="35" text-anchor="middle" fill="url(#heraclesGradient)" font-family="Arial, sans-serif" font-size="20" font-weight="bold" letter-spacing="1px" filter="url(#emboss)">HERACLES</text>
+  
+  <!-- Élément de clé intégré dans le H -->
+  <rect x="25" y="15" width="3" height="8" fill="url(#heraclesGradient)"/>
+  <rect x="25" y="18" width="6" height="2" fill="url(#heraclesGradient)"/>
+  
+  <!-- Tagline "Serrures et systèmes de sécurité" -->
+  <text x="80" y="55" text-anchor="middle" fill="#0066CC" font-family="Arial, sans-serif" font-size="10" font-weight="normal" letter-spacing="0.5px">Serrures et systèmes de sécurité</text>
+  
+  <!-- Éléments décoratifs subtils -->
+  <circle cx="20" cy="40" r="1" fill="#0066CC" opacity="0.3"/>
+  <circle cx="140" cy="40" r="1" fill="#0066CC" opacity="0.3"/>
+</svg>

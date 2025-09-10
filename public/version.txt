@@ -1,8 +1,4 @@
-Version: 2.0 - NOUVEAUX PRIX DIVISÉS PAR 2,5
-Date: 2024-09-09
-Commit: 39ee971
-Prix mis à jour:
-- Ouverture simple: 52€ (au lieu de 129€)
-- Ouverture complexe: 76€ (au lieu de 189€)
-- Changement cylindre: 36€ (au lieu de 89€)
-- Porte sécurisée: 120€ (au lieu de 299€)
+Version: 1.2.0
+Date: 2025-09-10-13:25
+Changes: Logos partenaires améliorés + banderole continue
+Cache-bust: true

@@ -53,14 +53,6 @@ export default function Header() {
               Accueil
             </Link>
             <Link 
-              href="/tarifs" 
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
-              }`}
-            >
-              Tarifs
-            </Link>
-            <Link 
               href="/faq" 
               className={`font-medium transition-colors ${
                 isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
@@ -109,15 +101,6 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Accueil
-              </Link>
-              <Link 
-                href="/tarifs" 
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Tarifs
               </Link>
               <Link 
                 href="/faq" 

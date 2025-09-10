@@ -1,6 +1,8 @@
 /**
  * Configuration centralisée du site
  * Toutes les variables sont éditables via les variables d'environnement
+ * Version: 1.2.0 - Logos partenaires améliorés + banderole continue
+ * Cache-bust: 2025-09-10-13:25
  */
 
 export const config = {
@@ -59,6 +61,20 @@ export const config = {
     whatsapp: `https://wa.me/${process.env.NEXT_PUBLIC_PHONE?.replace(/[^\d]/g, '') || '33123456789'}`,
     phone: `tel:${process.env.NEXT_PUBLIC_PHONE || '+33123456789'}`,
   },
+
+  // Partenaires serrurerie
+  partners: [
+    { name: 'Fichet', url: 'https://www.fichet.com', logo: '/assets/partners/fichet.svg' },
+    { name: 'Vachette', url: 'https://www.vachette.fr', logo: '/assets/partners/vachette.svg' },
+    { name: 'Bricard', url: 'https://www.bricard.fr', logo: '/assets/partners/bricard.svg' },
+    { name: 'JPM', url: 'https://www.jpm.fr', logo: '/assets/partners/jpm.svg' },
+    { name: 'DOM', url: 'https://www.dom-security.com', logo: '/assets/partners/dom.svg' },
+    { name: 'ABUS', url: 'https://www.abus.com', logo: '/assets/partners/abus.svg' },
+    { name: 'Heracles', url: 'https://www.heracles.fr', logo: '/assets/partners/heracles.svg' },
+    { name: 'Mottura', url: 'https://www.mottura.com', logo: '/assets/partners/mottura.svg' },
+    { name: 'CISA', url: 'https://www.cisa.com', logo: '/assets/partners/cisa.svg' },
+    { name: 'ISEO', url: 'https://www.iseo.com', logo: '/assets/partners/iseo.svg' }
+  ],
 
   // Contenu marketing
   content: {

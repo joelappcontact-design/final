@@ -1,0 +1,24 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond noir JPM -->
+  <rect width="160" height="80" rx="8" fill="#000000"/>
+  
+  <!-- Définitions pour effet -->
+  <defs>
+    <linearGradient id="jpmGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rectangle central blanc -->
+  <rect x="30" y="25" width="100" height="30" rx="4" fill="url(#jpmGradient)"/>
+  
+  <!-- Texte JPM avec police audacieuse -->
+  <text x="80" y="45" text-anchor="middle" fill="#000000" font-family="Impact, Arial Black, sans-serif" font-size="22" font-weight="900" letter-spacing="4px">JPM</text>
+  
+  <!-- Éléments décoratifs -->
+  <rect x="35" y="30" width="4" height="20" fill="#000000" opacity="0.6"/>
+  <rect x="121" y="30" width="4" height="20" fill="#000000" opacity="0.6"/>
+  <circle cx="40" cy="40" r="3" fill="#000000" opacity="0.4"/>
+  <circle cx="120" cy="40" r="3" fill="#000000" opacity="0.4"/>
+</svg>

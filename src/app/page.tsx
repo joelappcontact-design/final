@@ -1,4 +1,5 @@
 'use client';
+// Cache-bust: 2025-09-10-13:25 - Logos partenaires améliorés
 
 import { useEffect } from 'react';
 import { Clock, Shield, Star, CheckCircle, MapPin, Phone, MessageCircle } from 'lucide-react';
@@ -6,6 +7,7 @@ import CallCTA from '@/components/CallCTA';
 import CityGrid from '@/components/CityGrid';
 import FAQ from '@/components/FAQ';
 import TestimonialCard from '@/components/TestimonialCard';
+import PartnersMarquee from '@/components/PartnersMarquee';
 import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { Testimonial, FAQ as FAQType } from '@/types';
@@ -82,13 +84,20 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-outline">
             {config.content.hero.title}
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto text-shadow">
+          <p className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto text-outline">
             {config.content.hero.subtitle}
           </p>
+          
+          {/* Annonce de prix mise en avant */}
+          <div className="mb-8">
+            <div className="inline-block price-highlight px-8 py-4 rounded-2xl text-2xl md:text-3xl font-bold animate-bounce-gentle">
+              🔓 Ouverture de porte à partir de 39€
+            </div>
+          </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <CallCTA variant="primary" size="lg" showWhatsApp={true} />
@@ -96,55 +105,59 @@ export default function HomePage() {
           
           {/* Trust indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-white/80">
+            <div className="flex items-center justify-center gap-2 text-white">
               <CheckCircle size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium">Intervention rapide</span>
+              <span className="text-sm font-medium text-outline">Intervention rapide</span>
             </div>
-            <div className="flex items-center justify-center gap-2 text-white/80">
+            <div className="flex items-center justify-center gap-2 text-white">
               <Clock size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium">Intervention {config.slaMinutes}</span>
+              <span className="text-sm font-medium text-outline">Intervention {config.slaMinutes}</span>
             </div>
-            <div className="flex items-center justify-center gap-2 text-white/80">
+            <div className="flex items-center justify-center gap-2 text-white">
               <Shield size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium">Artisans vérifiés</span>
+              <span className="text-sm font-medium text-outline">Artisans vérifiés</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Pourquoi nous choisir */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
+          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16 text-outline">
             Pourquoi nous choisir ?
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Clock size={32} className="text-gray-900" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="modern-card text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Clock size={40} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Intervention rapide</h3>
-              <p className="text-white/80 text-sm">
-                Arrivée en {config.slaMinutes} en moyenne
+              <h3 className="text-2xl font-bold text-white mb-4">Intervention rapide</h3>
+              <p className="text-white/90 text-lg leading-relaxed">
+                Arrivée en <span className="font-bold text-yellow-400">{config.slaMinutes}</span> en moyenne. 
+                Nous comprenons l'urgence de votre situation et nous nous engageons à être à vos côtés rapidement.
               </p>
             </div>
             
-            <div className="card text-center">
-              <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <Shield size={32} className="text-gray-900" />
+            <div className="modern-card text-center group">
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Shield size={40} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Artisans vérifiés</h3>
-              <p className="text-white/80 text-sm">
-                {config.content.trust.certified}
+              <h3 className="text-2xl font-bold text-white mb-4">Artisans vérifiés</h3>
+              <p className="text-white/90 text-lg leading-relaxed">
+                {config.content.trust.certified}. Tous nos artisans sont certifiés, assurés et passent des vérifications de sécurité rigoureuses.
               </p>
             </div>
             
-            <div className="card text-center bg-yellow-400 border border-yellow-300">
-              <div className="px-6 py-8 rounded-2xl">
-                <h3 className="text-2xl md:text-3xl font-extrabold text-gray-900 mb-2">Ouverture de porte</h3>
-                <p className="text-3xl md:text-4xl font-black text-gray-900">à partir de 39€</p>
+            <div className="modern-card text-center group lg:col-span-1 md:col-span-2">
+              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <Clock size={40} className="text-gray-900" />
               </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Dépannage serrurier disponible 24/7</h3>
+              <p className="text-white/90 text-lg leading-relaxed">
+                Porte bloquée, clé perdue ou serrure endommagée ? Nos artisans qualifiés interviennent rapidement, évaluent la situation sur place et vous proposent une solution adaptée. Intervention soignée, matériel fiable et assistance en continu pour sécuriser votre accès en toute sérénité.
+              </p>
             </div>
           </div>
         </div>
@@ -178,19 +191,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Nos partenaires */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
-            Nos partenaires
-          </h2>
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Heracles</span>
-            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Vachette</span>
-            <span className="px-6 py-3 rounded-2xl bg-white/10 border border-white/20 text-white text-lg font-semibold">Bricard</span>
-          </div>
-        </div>
-      </section>
+      {/* Nos partenaires - Banderole défilante */}
+      <PartnersMarquee 
+        partners={config.partners}
+        speed={25000}
+        pauseOnHover={true}
+        grayscale={true}
+        gap={48}
+        height={48}
+        reduceMotionFallback={true}
+      />
 
       {/* Témoignages */}
       <section className="py-16 px-4">

@@ -205,14 +205,6 @@ export default function CityPage({ params }: CityPageProps) {
               </div>
             </div>
             
-            <div className="mt-8 text-center">
-              <a 
-                href="/tarifs" 
-                className="btn-secondary px-8 py-3 inline-flex items-center gap-2"
-              >
-                Voir tous les tarifs
-              </a>
-            </div>
           </div>
         </div>
       </section>
