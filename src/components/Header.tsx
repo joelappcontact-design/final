@@ -111,7 +111,7 @@ export default function Header() {
               </Link>
               
               <div className="pt-4">
-                <CallCTA variant="primary" size="sm" />
+                <CallButton variant="primary" size="sm" />
               </div>
             </nav>
           </div>
