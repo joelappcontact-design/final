@@ -150,8 +150,8 @@ export default function HomePage() {
             </div>
             
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
-                <Shield size={40} className="text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl flex items-center justify-center mx-auto mb-6 border-2 border-gray-300">
+                <Shield size={40} className="text-gray-700" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Artisans vérifiés</h3>
               <p className="text-slate-700 text-lg leading-relaxed">
@@ -160,8 +160,8 @@ export default function HomePage() {
             </div>
             
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
-                <Clock size={40} className="text-white" />
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Star size={40} className="text-white" />
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Disponibilité 24h/24</h3>
               <p className="text-slate-700 text-lg leading-relaxed">
