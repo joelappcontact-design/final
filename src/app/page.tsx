@@ -52,7 +52,7 @@ const faqData: FAQType[] = [
     id: 'faq-2',
     question: 'Quels sont vos tarifs ?',
     answer: 'Nos tarifs sont fixes et transparents : Ouverture simple à partir de 39€, ouverture complexe 89€, changement de cylindre 49€. Aucun frais caché.',
-    category: 'tarifs',
+    category: 'pricing',
   },
   {
     id: 'faq-3',
@@ -64,19 +64,19 @@ const faqData: FAQType[] = [
     id: 'faq-4',
     question: 'Vos artisans sont-ils certifiés ?',
     answer: 'Absolument ! Tous nos artisans sont certifiés, assurés et passent des vérifications de sécurité rigoureuses.',
-    category: 'qualite',
+    category: 'service',
   },
   {
     id: 'faq-5',
     question: 'Que faire si ma porte est bloquée ?',
     answer: 'Appelez-nous immédiatement ! Ne forcez pas la porte, cela pourrait l\'endommager davantage. Nos experts sauront intervenir sans dégâts.',
-    category: 'urgence',
+    category: 'emergency',
   },
   {
     id: 'faq-6',
     question: 'Acceptez-vous les paiements par carte ?',
     answer: 'Oui, nous acceptons tous les modes de paiement : espèces, carte bancaire, virement. La facture vous est envoyée automatiquement.',
-    category: 'paiement',
+    category: 'general',
   },
 ];
 
