@@ -1,9 +1,9 @@
 'use client';
-// Cache-bust: 2025-09-10-13:25 - Logos partenaires améliorés
 
 import { useEffect } from 'react';
 import { Clock, Shield, Star, CheckCircle, MapPin, Phone, MessageCircle } from 'lucide-react';
 import CallButton from '@/components/CallButton';
+import PhoneButton from '@/components/PhoneButton';
 import CityGrid from '@/components/CityGrid';
 import FAQ from '@/components/FAQ';
 import TestimonialCard from '@/components/TestimonialCard';
@@ -11,7 +11,6 @@ import PartnersMarquee from '@/components/PartnersMarquee';
 import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { Testimonial, FAQ as FAQType } from '@/types';
-
 
 // Témoignages clients
 const testimonials: Testimonial[] = [
@@ -50,208 +49,196 @@ const faqData: FAQType[] = [
     category: 'service',
   },
   {
+    id: 'faq-2',
+    question: 'Quels sont vos tarifs ?',
+    answer: 'Nos tarifs sont fixes et transparents : Ouverture simple à partir de 39€, ouverture complexe 89€, changement de cylindre 49€. Aucun frais caché.',
+    category: 'tarifs',
+  },
+  {
     id: 'faq-3',
-    question: 'Puis-je payer par carte ?',
-    answer: 'Oui, nous acceptons tous les modes de paiement : carte bancaire, espèces, virement. La facture est envoyée automatiquement par email.',
-    category: 'pricing',
+    question: 'Êtes-vous disponibles 24h/24 ?',
+    answer: 'Oui, nous intervenons 24h/24, 7j/7, y compris les weekends et jours fériés. Votre urgence est notre priorité.',
+    category: 'service',
   },
   {
     id: 'faq-4',
-    question: 'Intervention la nuit et jours fériés ?',
-    answer: 'Oui, nous intervenons 24h/24, 7j/7, y compris les nuits, week-ends et jours fériés. Les tarifs restent les mêmes.',
-    category: 'emergency',
+    question: 'Vos artisans sont-ils certifiés ?',
+    answer: 'Absolument ! Tous nos artisans sont certifiés, assurés et passent des vérifications de sécurité rigoureuses.',
+    category: 'qualite',
   },
   {
     id: 'faq-5',
-    question: 'Artisans certifiés ?',
-    answer: 'Tous nos artisans sont certifiés, vérifiés et assurés. Nous effectuons des vérifications régulières de leurs compétences.',
-    category: 'general',
+    question: 'Que faire si ma porte est bloquée ?',
+    answer: 'Appelez-nous immédiatement ! Ne forcez pas la porte, cela pourrait l\'endommager davantage. Nos experts sauront intervenir sans dégâts.',
+    category: 'urgence',
   },
-  
+  {
+    id: 'faq-6',
+    question: 'Acceptez-vous les paiements par carte ?',
+    answer: 'Oui, nous acceptons tous les modes de paiement : espèces, carte bancaire, virement. La facture vous est envoyée automatiquement.',
+    category: 'paiement',
+  },
 ];
 
 export default function HomePage() {
   useEffect(() => {
-    // Initialise le tracking
     initializeTracking();
-    
-    // Sauvegarde le GCLID si présent
     saveGclid();
   }, []);
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4">
+      <section className="relative pt-24 pb-16 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-outline">
+          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
             🇫🇷 Serrurier d'urgence {config.primaryCity} 24h/24
           </h1>
           
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto text-outline">
-            🛠️ Artisans français de confiance • Appelez {config.phoneDisplay} pour intervention immédiate • Prix fixes • Intervention en {config.slaMinutes}
+          <p className="text-xl md:text-2xl text-black mb-8 max-w-4xl mx-auto font-semibold">
+            🛠️ Artisans français de confiance • Intervention en {config.slaMinutes}
           </p>
+          
           
           {/* Annonce de prix mise en avant */}
           <div className="mb-8">
-            <div className="inline-block price-highlight px-8 py-4 rounded-2xl text-2xl md:text-3xl font-bold animate-bounce-gentle">
+            <div className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-2xl text-2xl md:text-3xl font-bold shadow-2xl border-2 border-red-500/30">
               🔓 Ouverture de porte à partir de 39€
             </div>
           </div>
           
+          {/* Bouton CTA modernisé */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <CallButton variant="primary" size="lg" />
           </div>
           
           {/* Trust indicators */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center gap-2 text-white">
-              <CheckCircle size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium text-outline">Intervention rapide</span>
+          <div className="flex flex-wrap justify-center gap-8 max-w-2xl mx-auto">
+            <div className="flex items-center gap-2 text-black">
+              <CheckCircle size={20} className="text-green-600" />
+              <span className="text-sm font-medium text-black">Intervention rapide</span>
             </div>
-            <div className="flex items-center justify-center gap-2 text-white">
-              <Clock size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium text-outline">Intervention {config.slaMinutes}</span>
+            <div className="flex items-center gap-2 text-black">
+              <Clock size={20} className="text-blue-600" />
+              <span className="text-sm font-medium text-black">{config.slaMinutes}</span>
             </div>
-            <div className="flex items-center justify-center gap-2 text-white">
-              <Shield size={20} className="text-yellow-400" />
-              <span className="text-sm font-medium text-outline">Artisans vérifiés</span>
+            <div className="flex items-center gap-2 text-black">
+              <Shield size={20} className="text-red-600" />
+              <span className="text-sm font-medium text-black">Artisans vérifiés</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Pourquoi nous choisir */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/30">
         <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16 text-outline">
+          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
             Pourquoi nous choisir ?
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="modern-card text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Clock size={40} className="text-gray-900" />
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Clock size={40} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Intervention rapide</h3>
-              <p className="text-white/90 text-lg leading-relaxed">
-                Arrivée en <span className="font-bold text-yellow-400">{config.slaMinutes}</span> en moyenne. 
-                Nous comprenons l'urgence de votre situation et nous nous engageons à être à vos côtés rapidement.
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Intervention rapide</h3>
+              <p className="text-slate-700 text-lg leading-relaxed">
+                Arrivée en <span className="font-bold text-blue-600">{config.slaMinutes}</span> en moyenne. 
+                Nous comprenons l'urgence de votre situation.
               </p>
             </div>
             
-            <div className="modern-card text-center group">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Shield size={40} className="text-gray-900" />
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Shield size={40} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Artisans vérifiés</h3>
-              <p className="text-white/90 text-lg leading-relaxed">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Artisans vérifiés</h3>
+              <p className="text-slate-700 text-lg leading-relaxed">
                 {config.content.trust.certified}. Tous nos artisans sont certifiés, assurés et passent des vérifications de sécurité rigoureuses.
               </p>
             </div>
             
-            <div className="modern-card text-center group lg:col-span-1 md:col-span-2">
-              <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <Clock size={40} className="text-gray-900" />
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
+                <Star size={40} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Dépannage serrurier disponible 24/7</h3>
-              <p className="text-white/90 text-lg leading-relaxed">
-                Porte bloquée, clé perdue ou serrure endommagée ? Nos artisans qualifiés interviennent rapidement, évaluent la situation sur place et vous proposent une solution adaptée. Intervention soignée, matériel fiable et assistance en continu pour sécuriser votre accès en toute sérénité.
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Prix fixes et transparents</h3>
+              <p className="text-slate-700 text-lg leading-relaxed">
+                {config.content.trust.priceTransparency}. Aucune surprise, le prix annoncé est le prix payé.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* Zones couvertes */}
-      <section className="py-16 px-4">
+      {/* Témoignages clients */}
+      <section className="py-20 px-4">
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
-            Zones d'intervention
-          </h2>
-          
-          <div className="text-center mb-8">
-            <p className="text-white/80 text-lg">
-              Temps moyen d'intervention {config.slaMinutes} selon trafic
-            </p>
-          </div>
-          
-          <CityGrid maxItems={12} />
-          
-          <div className="text-center mt-8">
-            <a 
-              href="/zones" 
-              className="btn-secondary px-8 py-3 inline-flex items-center gap-2"
-            >
-              <MapPin size={20} />
-              Voir toutes les zones
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Nos partenaires - Banderole défilante */}
-      <PartnersMarquee 
-        partners={config.partners}
-        speed={25000}
-        pauseOnHover={true}
-        grayscale={true}
-        gap={48}
-        height={48}
-        reduceMotionFallback={true}
-      />
-
-      {/* Témoignages */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
+          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
             Ce que disent nos clients
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.id} testimonial={testimonial} />
             ))}
           </div>
-          
-          <div className="text-center mt-8">
-            <div className="flex items-center justify-center gap-2 text-white/80">
-              <Star size={20} className="text-yellow-400 fill-current" />
-              <span className="text-lg font-semibold">4,8/5</span>
-              <span className="text-sm">moyenne sur 127 avis</span>
-            </div>
-          </div>
+        </div>
+      </section>
+
+      {/* Zones d'intervention */}
+      <section className="py-20 px-4 bg-white/30">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
+            Nos zones d'intervention
+          </h2>
+          <CityGrid />
+        </div>
+      </section>
+
+      {/* Nos partenaires */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
+            Nos partenaires de confiance
+          </h2>
+          <PartnersMarquee 
+            partners={config.partners}
+            speed={25000}
+            pauseOnHover={true}
+            grayscale={false}
+            gap={48}
+            height={48}
+          />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-shadow">
+      <section className="py-20 px-4 bg-white/30">
+        <div className="container mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
             Questions fréquentes
           </h2>
-          
           <FAQ faqs={faqData} />
         </div>
       </section>
 
-      {/* CTA Final */}
-      <section className="py-16 px-4">
+      {/* CTA final */}
+      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-white to-red-600">
         <div className="container mx-auto text-center">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-shadow">
-              Besoin d'une intervention d'urgence ?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Appelez-nous maintenant, nous intervenons en {config.slaMinutes}
-            </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>
+            Besoin d'un serrurier maintenant ?
+          </h2>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto font-semibold" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>
+            Appelez-nous 24h/24 pour une intervention immédiate
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <CallButton variant="primary" size="lg" />
+            <PhoneButton variant="secondary" size="lg" />
           </div>
         </div>
       </section>
-
-      {/* Sticky CTA Mobile - maintenant géré dans layout.tsx */}
     </div>
   );
 }

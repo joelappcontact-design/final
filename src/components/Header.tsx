@@ -23,53 +23,38 @@ export default function Header() {
   return (
     <header className={`
       fixed top-0 left-0 right-0 z-40 transition-all duration-300
-      ${isScrolled 
-        ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
-        : 'bg-transparent'
-      }
+      bg-gradient-to-r from-blue-600 via-white to-red-600
+      shadow-xl border-b-2 border-white/30 h-20
     `}>
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo et nom */}
-          <Link href="/" className="flex items-center gap-3">
+      <div className="container mx-auto px-4 h-full flex items-center justify-between">
+          {/* Logo à gauche */}
+          <Link href="/" className="flex items-center">
             <Image 
-              src="/logo.svg" 
+              src="/logo-serrurier-francais.png" 
               alt="Serrurierfrancais.com" 
-              width={80} 
-              height={40}
-              className="h-8 w-auto"
+              width={200} 
+              height={100}
+              className="h-20 w-auto brightness-0 invert logo-outline"
             />
-            <span className={`
-              font-bold text-lg transition-colors
-              ${isScrolled ? 'text-gray-900' : 'text-white'}
-            `}>
-              Serrurierfrancais.com
-            </span>
           </Link>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex items-center gap-8">
             <Link 
               href="/" 
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
-              }`}
+              className="font-medium text-slate-900 hover:text-blue-600 transition-colors"
             >
               Accueil
             </Link>
             <Link 
               href="/faq" 
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
-              }`}
+              className="font-medium text-slate-900 hover:text-blue-600 transition-colors"
             >
               FAQ
             </Link>
             <Link 
               href="/contact" 
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/90 hover:text-white'
-              }`}
+              className="font-medium text-slate-900 hover:text-blue-600 transition-colors"
             >
               Contact
             </Link>
@@ -92,11 +77,10 @@ export default function Header() {
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div>
 
         {/* Menu Mobile */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-white/20">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-gradient-to-r from-blue-600 via-white to-red-600 shadow-lg border-t border-white/20">
             <nav className="flex flex-col gap-4">
               <Link 
                 href="/" 

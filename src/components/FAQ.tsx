@@ -38,7 +38,7 @@ export default function FAQ({ faqs, className = '' }: FAQProps) {
               aria-expanded={isOpen}
               aria-controls={`faq-answer-${faq.id}`}
             >
-              <h3 className="font-semibold text-white pr-4">{faq.question}</h3>
+              <h3 className="font-semibold text-black pr-4">{faq.question}</h3>
               {isOpen ? (
                 <ChevronUp size={20} className="text-yellow-400 flex-shrink-0" />
               ) : (
@@ -52,7 +52,7 @@ export default function FAQ({ faqs, className = '' }: FAQProps) {
                 isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
               }`}
             >
-              <div className="px-6 pb-4 text-white/90">
+              <div className="px-6 pb-4 text-black">
                 <p className="leading-relaxed">{faq.answer}</p>
               </div>
             </div>

@@ -36,12 +36,12 @@ export default function CallButton({
     }
   };
 
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-400/50 active:scale-95";
+  const baseClasses = "inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-400/50 active:scale-95 cursor-pointer";
   
   const variantClasses = {
-    primary: "bg-gradient-to-r from-red-500 via-white to-blue-600 text-gray-900 hover:from-red-600 hover:via-white hover:to-blue-700 shadow-lg hover:shadow-xl border-2 border-white/20",
-    secondary: "bg-white/10 backdrop-blur-sm text-white border border-white/20 hover:bg-white/20",
-    sticky: "bg-gradient-to-r from-red-500 via-white to-blue-600 text-gray-900 hover:from-red-600 hover:via-white hover:to-blue-700 shadow-2xl hover:shadow-3xl fixed bottom-4 left-4 right-4 z-50 md:left-auto md:right-4 md:w-auto md:min-w-[200px] border-2 border-white/30"
+    primary: "bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-xl hover:shadow-2xl border-2 border-green-400/50 hover:scale-105 transform transition-all duration-300",
+    secondary: "bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900 hover:from-yellow-500 hover:to-amber-600 shadow-lg hover:shadow-xl border-2 border-yellow-300/50 hover:scale-105 transform transition-all duration-300",
+    sticky: "bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-3xl fixed bottom-4 left-4 right-4 z-50 md:left-auto md:right-4 md:w-auto md:min-w-[200px] border-2 border-green-400/50 hover:scale-105 transform transition-all duration-300"
   };
 
   const sizeClasses = {

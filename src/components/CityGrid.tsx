@@ -40,17 +40,17 @@ export default function CityGrid({
           >
             <div className="flex items-center gap-3 mb-2">
               <MapPin size={20} className="text-yellow-400" />
-              <h3 className="font-semibold text-white group-hover:text-yellow-400 transition-colors">
+              <h3 className="font-semibold text-black group-hover:text-yellow-600 transition-colors">
                 {city}
               </h3>
             </div>
             
-            <div className="flex items-center gap-2 text-white/70 text-sm">
+            <div className="flex items-center gap-2 text-black text-sm">
               <Clock size={16} />
               <span>Intervention en {config.slaMinutes}</span>
             </div>
             
-            <div className="mt-3 text-white/60 text-xs">
+            <div className="mt-3 text-gray-600 text-xs">
               Cliquez pour voir les détails
             </div>
           </Link>

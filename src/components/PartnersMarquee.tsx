@@ -85,7 +85,7 @@ export default function PartnersMarquee({
         aria-label="Partenaires serrurerie"
       >
         <div className="container mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-outline">
+          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
             Nos partenaires
           </h2>
           <div 
@@ -141,7 +141,7 @@ export default function PartnersMarquee({
       aria-label="Partenaires serrurerie"
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 text-outline">
+        <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
           Nos partenaires
         </h2>
         

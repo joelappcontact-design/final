@@ -15,60 +15,26 @@
   
   body {
     background: 
-      /* Motifs géométriques français subtils */
-      radial-gradient(circle at 20% 20%, rgba(0, 35, 149, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(237, 41, 57, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
-      
-      /* Drapeau français moderne avec blur et transparence */
+      /* Dégradé du drapeau français subtil */
       linear-gradient(135deg, 
-        rgba(0, 35, 149, 0.15) 0%, 
-        rgba(0, 35, 149, 0.1) 25%, 
-        rgba(255, 255, 255, 0.1) 25%, 
-        rgba(255, 255, 255, 0.1) 50%, 
-        rgba(255, 255, 255, 0.05) 50%, 
-        rgba(255, 255, 255, 0.05) 75%, 
-        rgba(237, 41, 57, 0.1) 75%, 
-        rgba(237, 41, 57, 0.15) 100%
+        rgba(30, 64, 175, 0.8) 0%, 
+        rgba(30, 64, 175, 0.6) 25%, 
+        rgba(255, 255, 255, 0.9) 25%, 
+        rgba(255, 255, 255, 0.9) 50%, 
+        rgba(255, 255, 255, 0.7) 50%, 
+        rgba(255, 255, 255, 0.7) 75%, 
+        rgba(220, 38, 38, 0.6) 75%, 
+        rgba(220, 38, 38, 0.8) 100%
       ),
-      
       /* Fond de base moderne */
       linear-gradient(135deg, 
-        #0f172a 0%, 
-        #1e293b 25%, 
-        #334155 50%, 
-        #475569 75%, 
-        #64748b 100%
+        #f8fafc 0%, 
+        #e2e8f0 50%, 
+        #cbd5e1 100%
       );
     background-attachment: fixed;
     min-height: 100vh;
     position: relative;
-  }
-  
-  /* Effet de particules flottantes françaises */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, rgba(0, 35, 149, 0.3), transparent),
-      radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
-      radial-gradient(1px 1px at 90px 40px, rgba(237, 41, 57, 0.3), transparent),
-      radial-gradient(1px 1px at 130px 80px, rgba(0, 35, 149, 0.2), transparent),
-      radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.1), transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: float 20s linear infinite;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    100% { transform: translateY(-100px) rotate(360deg); }
   }
   
   /* Amélioration de l'accessibilité */
@@ -76,34 +42,192 @@
     @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
   }
   
-  /* Amélioration des contrastes pour les textes */
+  /* Optimisation lisibilité pour SEO et Google Ads */
   .text-white {
-    text-shadow: 
-      0 0 4px rgba(0, 0, 0, 0.9),
-      0 0 8px rgba(0, 0, 0, 0.7),
-      0 2px 4px rgba(0, 0, 0, 0.8);
-    font-weight: 600;
+    color: #0f172a !important; /* slate-900 - très sombre */
+    text-shadow: none;
+    font-weight: 700;
     letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
-  /* Contours pour tous les textes sur fond dégradé */
+  /* Titres optimisés pour la lisibilité */
   h1, h2, h3, h4, h5, h6 {
-    text-shadow: 
-      0 0 6px rgba(0, 0, 0, 1),
-      0 0 12px rgba(0, 0, 0, 0.8),
-      0 0 18px rgba(0, 0, 0, 0.6),
-      0 3px 6px rgba(0, 0, 0, 0.9);
-    font-weight: 800;
+    color: #0f172a !important; /* slate-900 - très sombre */
+    text-shadow: none;
+    font-weight: 900;
     letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Classe spéciale pour les textes sur fond clair */
+  .text-on-light-bg {
+    color: #000000 !important; /* noir pur */
+    text-shadow: none;
+    font-weight: 600;
   }
   
   /* Textes sur fond clair (blanc) */
   .text-on-light {
-    color: #1e3a8a;
-    text-shadow: 
-      0 0 2px rgba(255, 255, 255, 0.8),
-      0 0 4px rgba(255, 255, 255, 0.6);
+    color: #000000 !important; /* noir pur */
+    text-shadow: none;
     font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Force tous les petits textes en noir */
+  p, span, div, small, .text-sm, .text-xs, .text-base {
+    color: #000000 !important;
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Textes dans les cartes */
+  .card p, .card span, .card div {
+    color: #000000 !important;
+  }
+  
+  /* Force TOUS les textes du footer en blanc - plus spécifique */
+  footer {
+    background-color: #1e293b !important;
+    color: #ffffff !important;
+  }
+  
+  footer * {
+    color: #ffffff !important;
+  }
+  
+  footer p, footer span, footer div, footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer a, footer li, footer ul, footer ol {
+    color: #ffffff !important;
+  }
+  
+  footer .text-gray-300, footer .text-gray-400, footer .text-gray-500, footer .text-gray-600, footer .text-gray-700, footer .text-gray-800, footer .text-gray-900 {
+    color: #ffffff !important;
+  }
+  
+  footer .text-slate-300, footer .text-slate-400, footer .text-slate-500, footer .text-slate-600, footer .text-slate-700, footer .text-slate-800, footer .text-slate-900 {
+    color: #ffffff !important;
+  }
+  
+  footer .text-black, footer .text-gray-900, footer .text-slate-900 {
+    color: #ffffff !important;
+  }
+  
+  /* Exceptions UNIQUEMENT pour les éléments d'action (téléphone, liens importants) */
+  footer .text-yellow-400, footer .text-yellow-300, footer a[href*="tel:"], footer .phone-link {
+    color: #fbbf24 !important;
+  }
+  
+  /* Force les liens du footer en blanc avec survol jaune */
+  footer a:not(.text-yellow-400):not(.text-yellow-300):not([href*="tel:"]):not(.phone-link) {
+    color: #ffffff !important;
+  }
+  
+  footer a:not(.text-yellow-400):not(.text-yellow-300):not([href*="tel:"]):not(.phone-link):hover {
+    color: #fbbf24 !important;
+  }
+  
+  /* Force spécifiquement la section zones d'intervention */
+  footer .mt-8.pt-8.border-t.border-gray-800 p,
+  footer .mt-8.pt-8.border-t.border-gray-800 span,
+  footer .mt-8.pt-8.border-t.border-gray-800 div {
+    color: #ffffff !important;
+  }
+  
+  /* Styles pour le logo avec dégradé bleu marine (bas) et blanc (haut) */
+  .logo-gradient {
+    position: relative;
+    filter: grayscale(100%) contrast(1.2);
+  }
+  
+  .logo-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.7) 30%,
+      rgba(255, 255, 255, 0.3) 60%,
+      rgba(30, 41, 59, 0.8) 100%
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .logo-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 40%,
+      rgba(30, 41, 59, 0.6) 70%,
+      rgba(30, 41, 59, 1) 100%
+    );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* Alternative avec masque CSS */
+  .logo-gradient-mask {
+    -webkit-mask: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.8) 50%,
+      rgba(0,0,0,0.3) 100%
+    );
+    mask: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,
+      rgba(0,0,0,0.8) 50%,
+      rgba(0,0,0,0.3) 100%
+    );
+    filter: grayscale(100%) contrast(1.3);
+  }
+  
+  /* Contour noir pour le logo */
+  .logo-outline {
+    filter: 
+      brightness(0) 
+      invert(1) 
+      drop-shadow(0 0 2px rgba(0, 0, 0, 1))
+      drop-shadow(0 0 4px rgba(0, 0, 0, 0.8))
+      drop-shadow(0 0 6px rgba(0, 0, 0, 0.6));
+  }
+  
+  /* Alternative avec stroke CSS */
+  .logo-outline-alt {
+    filter: brightness(0) invert(1);
+    -webkit-filter: 
+      brightness(0) 
+      invert(1) 
+      drop-shadow(0 0 3px rgba(0, 0, 0, 1))
+      drop-shadow(0 0 6px rgba(0, 0, 0, 0.8));
+  }
+  
+  /* Amélioration des fonds pour meilleur contraste */
+  .bg-white\/30 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: none;
+  }
+  
+  .bg-white\/80 {
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: none;
   }
 }
 
@@ -202,15 +326,14 @@
       0 2px 4px rgba(0, 0, 0, 0.8);
   }
   
-  /* Contours forts pour les textes critiques */
+  /* Contours nets pour les textes critiques */
   .text-outline {
-    text-shadow: 
-      0 0 8px rgba(0, 0, 0, 1),
-      0 0 16px rgba(0, 0, 0, 0.9),
-      0 0 24px rgba(0, 0, 0, 0.7),
-      0 4px 8px rgba(0, 0, 0, 1);
-    font-weight: 700;
+    color: #0f172a !important; /* slate-900 - très sombre */
+    text-shadow: none;
+    font-weight: 900;
     letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Style pour l'annonce de prix mise en avant */
