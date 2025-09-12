@@ -1,0 +1,28 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond marron Mottura -->
+  <rect width="160" height="80" rx="8" fill="#8B4513"/>
+  
+  <!-- Définitions pour effet -->
+  <defs>
+    <linearGradient id="motturaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rectangle central blanc -->
+  <rect x="25" y="25" width="110" height="30" rx="4" fill="url(#motturaGradient)"/>
+  
+  <!-- Texte MOTTURA avec police italienne élégante -->
+  <text x="80" y="45" text-anchor="middle" fill="#8B4513" font-family="Times New Roman, serif" font-size="16" font-weight="bold" letter-spacing="1px" font-style="italic">MOTTURA</text>
+  
+  <!-- Éléments de sécurité -->
+  <rect x="30" y="30" width="4" height="20" fill="#8B4513" opacity="0.6"/>
+  <rect x="126" y="30" width="4" height="20" fill="#8B4513" opacity="0.6"/>
+  <circle cx="35" cy="40" r="3" fill="#8B4513" opacity="0.8"/>
+  <circle cx="125" cy="40" r="3" fill="#8B4513" opacity="0.8"/>
+  
+  <!-- Clé stylisée -->
+  <path d="M65 40 L95 40" stroke="#8B4513" stroke-width="2"/>
+  <circle cx="65" cy="40" r="3" fill="#8B4513"/>
+</svg>

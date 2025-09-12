@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    background: 
+      /* Motifs géométriques français subtils */
+      radial-gradient(circle at 20% 20%, rgba(0, 35, 149, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(237, 41, 57, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 70%),
+      
+      /* Drapeau français moderne avec blur et transparence */
+      linear-gradient(135deg, 
+        rgba(0, 35, 149, 0.15) 0%, 
+        rgba(0, 35, 149, 0.1) 25%, 
+        rgba(255, 255, 255, 0.1) 25%, 
+        rgba(255, 255, 255, 0.1) 50%, 
+        rgba(255, 255, 255, 0.05) 50%, 
+        rgba(255, 255, 255, 0.05) 75%, 
+        rgba(237, 41, 57, 0.1) 75%, 
+        rgba(237, 41, 57, 0.15) 100%
+      ),
+      
+      /* Fond de base moderne */
+      linear-gradient(135deg, 
+        #0f172a 0%, 
+        #1e293b 25%, 
+        #334155 50%, 
+        #475569 75%, 
+        #64748b 100%
+      );
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Effet de particules flottantes françaises */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, rgba(0, 35, 149, 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, rgba(237, 41, 57, 0.3), transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(0, 35, 149, 0.2), transparent),
+      radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.1), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: float 20s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-100px) rotate(360deg); }
+  }
+  
+  /* Amélioration de l'accessibilité */
+  :focus-visible {
+    @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+  }
+  
+  /* Amélioration des contrastes pour les textes */
+  .text-white {
+    text-shadow: 
+      0 0 4px rgba(0, 0, 0, 0.9),
+      0 0 8px rgba(0, 0, 0, 0.7),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Contours pour tous les textes sur fond dégradé */
+  h1, h2, h3, h4, h5, h6 {
+    text-shadow: 
+      0 0 6px rgba(0, 0, 0, 1),
+      0 0 12px rgba(0, 0, 0, 0.8),
+      0 0 18px rgba(0, 0, 0, 0.6),
+      0 3px 6px rgba(0, 0, 0, 0.9);
+    font-weight: 800;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Textes sur fond clair (blanc) */
+  .text-on-light {
+    color: #1e3a8a;
+    text-shadow: 
+      0 0 2px rgba(255, 255, 255, 0.8),
+      0 0 4px rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20;
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/15 hover:border-white/30;
+  }
+  
+  /* Boutons avec effet de survol amélioré */
+  .btn-primary {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-semibold rounded-2xl transition-all duration-300 hover:from-yellow-300 hover:to-yellow-400 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-yellow-400/50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/20 backdrop-blur-sm text-white border border-white/30 font-semibold rounded-2xl transition-all duration-300 hover:bg-white/30 hover:border-white/50 hover:scale-105 active:scale-95 focus:outline-none focus:ring-4 focus:ring-white/50;
+  }
+  
+  /* Cartes avec effet glassmorphism */
+  .card {
+    @apply bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:scale-105 hover:shadow-xl;
+  }
+  
+  /* Cartes modernes pour "Pourquoi nous choisir" */
+  .modern-card {
+    @apply bg-white/15 backdrop-blur-md border-2 border-white/30 rounded-3xl p-8 transition-all duration-500 hover:bg-white/20 hover:border-white/40 hover:scale-105 hover:shadow-2xl;
+    box-shadow: 
+      0 20px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(255, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .modern-card h3 {
+    @apply text-white text-xl font-bold mb-4 text-outline;
+  }
+  
+  .modern-card p {
+    @apply text-white/90 text-base leading-relaxed text-outline;
+  }
+  
+  /* Animations personnalisées */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s infinite;
+  }
+  
+  /* Sticky CTA pour mobile */
+  .sticky-cta {
+    @apply fixed bottom-4 left-4 right-4 z-50 md:hidden;
+  }
+  
+  /* Amélioration des touch targets pour mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+}
+
+@layer utilities {
+  /* Utilitaires pour les dégradés */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #6B4EFF 0%, #0EA5E9 100%);
+  }
+  
+  .bg-gradient-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  }
+  
+  /* Ombres personnalisées */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Text shadow pour améliorer la lisibilité */
+  .text-shadow {
+    text-shadow: 
+      0 0 3px rgba(0, 0, 0, 0.8),
+      0 0 6px rgba(0, 0, 0, 0.6),
+      0 1px 2px rgba(0, 0, 0, 0.9);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 
+      0 0 4px rgba(0, 0, 0, 0.9),
+      0 0 8px rgba(0, 0, 0, 0.7),
+      0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Contours forts pour les textes critiques */
+  .text-outline {
+    text-shadow: 
+      0 0 8px rgba(0, 0, 0, 1),
+      0 0 16px rgba(0, 0, 0, 0.9),
+      0 0 24px rgba(0, 0, 0, 0.7),
+      0 4px 8px rgba(0, 0, 0, 1);
+    font-weight: 700;
+    letter-spacing: 0.025em;
+  }
+  
+  /* Style pour l'annonce de prix mise en avant */
+  .price-highlight {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1e3a8a;
+    text-shadow: 
+      0 0 4px rgba(255, 255, 255, 0.8),
+      0 0 8px rgba(255, 255, 255, 0.6),
+      0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    box-shadow: 
+      0 8px 32px rgba(251, 191, 36, 0.4),
+      0 0 0 4px rgba(255, 255, 255, 0.2),
+      inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Animations keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animation marquee pour les partenaires */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Styles pour les lecteurs d'écran */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  background: white;
+  color: black;
+  z-index: 1000;
+}
+
+
+/* Focus visible pour les éléments interactifs */
+.focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+}
+
+/* Amélioration des contrastes pour les liens */
+a:focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600 rounded-lg;
+}
+
+/* Styles pour les formulaires */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply outline-none ring-4 ring-yellow-400/50 ring-offset-2 ring-offset-purple-600;
+}
+
+/* Amélioration de la performance avec will-change */
+.hover-scale {
+  will-change: transform;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Styles pour les éléments sticky */
+.sticky-header {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+  /* Optimisation pour les écrans haute résolution */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .text-shadow {
+    text-shadow: 
+      0 0 2px rgba(0, 0, 0, 0.9),
+      0 0 4px rgba(0, 0, 0, 0.7),
+      0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+  
+  .text-outline {
+    text-shadow: 
+      0 0 3px rgba(0, 0, 0, 1),
+      0 0 6px rgba(0, 0, 0, 0.8),
+      0 0 9px rgba(0, 0, 0, 0.6),
+      0 1px 2px rgba(0, 0, 0, 1);
+  }
+}

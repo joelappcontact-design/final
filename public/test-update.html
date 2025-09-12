@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Mise à Jour - Serrurier Urgence</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6B4EFF 0%, #0EA5E9 100%);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .prices {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #ff6b6b;
+        }
+        .new-price {
+            color: #4ade80;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Test Mise à Jour - Serrurier Urgence</h1>
+        
+        <div class="status">
+            <h2>✅ Modifications appliquées :</h2>
+            <ul style="text-align: left;">
+                <li>✅ Suppression de toutes les références à "Joël"</li>
+                <li>✅ Division des prix par 2,5</li>
+                <li>✅ Ajout de "à partir de" avant chaque prix</li>
+                <li>✅ Suppression de toutes les mentions "prix fixe"</li>
+            </ul>
+        </div>
+
+        <div class="prices">
+            <h3>💰 Nouveaux prix (divisés par 2,5) :</h3>
+            <div class="price-item">
+                <span>Ouverture simple :</span>
+                <span><span class="old-price">129€</span> → <span class="new-price">à partir de 52€ TTC</span></span>
+            </div>
+            <div class="price-item">
+                <span>Ouverture complexe :</span>
+                <span><span class="old-price">189€</span> → <span class="new-price">à partir de 76€ TTC</span></span>
+            </div>
+            <div class="price-item">
+                <span>Changement cylindre :</span>
+                <span><span class="old-price">89€</span> → <span class="new-price">à partir de 36€ TTC</span></span>
+            </div>
+            <div class="price-item">
+                <span>Porte sécurisée :</span>
+                <span><span class="old-price">299€</span> → <span class="new-price">à partir de 120€ TTC</span></span>
+            </div>
+        </div>
+
+        <div class="status">
+            <h3>🔄 Si vous voyez cette page, Vercel fonctionne !</h3>
+            <p>Commit: 53776cc - Date: 2024-09-09</p>
+            <p><a href="/" style="color: #FFD54A; text-decoration: underline;">← Retour au site principal</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Version: 1.2.0
+Date: 2025-09-10-13:25
+Changes: Logos partenaires améliorés + banderole continue
+Cache-bust: true

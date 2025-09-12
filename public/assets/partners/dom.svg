@@ -1,0 +1,28 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond orange DOM -->
+  <rect width="160" height="80" rx="8" fill="#FF6600"/>
+  
+  <!-- Définitions pour effet -->
+  <defs>
+    <linearGradient id="domGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rectangle central blanc -->
+  <rect x="25" y="25" width="110" height="30" rx="4" fill="url(#domGradient)"/>
+  
+  <!-- Texte DOM avec police technique -->
+  <text x="80" y="45" text-anchor="middle" fill="#FF6600" font-family="Courier New, monospace" font-size="20" font-weight="bold" letter-spacing="3px">DOM</text>
+  
+  <!-- Éléments de sécurité -->
+  <rect x="30" y="30" width="5" height="20" fill="#FF6600" opacity="0.6"/>
+  <rect x="125" y="30" width="5" height="20" fill="#FF6600" opacity="0.6"/>
+  <circle cx="35" cy="40" r="3" fill="#FF6600" opacity="0.8"/>
+  <circle cx="125" cy="40" r="3" fill="#FF6600" opacity="0.8"/>
+  
+  <!-- Clé stylisée -->
+  <path d="M65 40 L95 40" stroke="#FF6600" stroke-width="2"/>
+  <circle cx="65" cy="40" r="3" fill="#FF6600"/>
+</svg>

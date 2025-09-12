@@ -1,0 +1,26 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond bleu Bricard -->
+  <rect width="160" height="80" rx="8" fill="#0066CC"/>
+  
+  <!-- Définitions pour effet -->
+  <defs>
+    <linearGradient id="bricardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F0F0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Cercle central blanc -->
+  <circle cx="80" cy="40" r="25" fill="url(#bricardGradient)"/>
+  
+  <!-- Texte BRICARD avec police moderne -->
+  <text x="80" y="47" text-anchor="middle" fill="#0066CC" font-family="Arial, sans-serif" font-size="16" font-weight="bold" letter-spacing="2px">BRICARD</text>
+  
+  <!-- Clé stylisée -->
+  <path d="M55 40 L65 40 L65 30 L95 30 L95 40 L105 40" stroke="#0066CC" stroke-width="3" fill="none"/>
+  <circle cx="55" cy="40" r="4" fill="#0066CC"/>
+  
+  <!-- Éléments de sécurité -->
+  <rect x="25" y="25" width="5" height="30" fill="white" opacity="0.3"/>
+  <rect x="130" y="25" width="5" height="30" fill="white" opacity="0.3"/>
+</svg>
