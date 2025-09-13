@@ -44,100 +44,22 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-// Partenaires assurance
-const insurancePartners = [
-  {
-    name: "AXA",
-    logo: "/logos/axa.png",
-    description: "Leader français de l'assurance avec une couverture complète pour tous vos biens.",
-    rating: 5,
-    coverage: ["Vol", "Dégâts des eaux", "Incendie", "Responsabilité civile"]
-  },
-  {
-    name: "Groupama",
-    logo: "/logos/groupama.png", 
-    description: "Mutuelle d'assurance française proposant des garanties adaptées aux particuliers.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
-  },
-  {
-    name: "MAIF",
-    logo: "/logos/maif.png",
-    description: "Société d'assurance mutuelle avec des tarifs préférentiels pour ses adhérents.",
-    rating: 5,
-    coverage: ["Multirisque habitation", "Assistance", "Protection juridique", "Cyber"]
-  },
-  {
-    name: "MACIF",
-    logo: "/logos/macif.png",
-    description: "Mutuelle d'assurance française offrant des solutions personnalisées.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Épargne"]
-  },
-  {
-    name: "Allianz",
-    logo: "/logos/allianz.png",
-    description: "Compagnie d'assurance internationale avec une forte présence en France.",
-    rating: 4,
-    coverage: ["Multirisque", "Responsabilité", "Assistance", "Voyage"]
-  },
-  {
-    name: "Generali",
-    logo: "/logos/generali.png",
-    description: "Groupe d'assurance européen proposant des solutions innovantes.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
-  },
-  {
-    name: "Crédit Agricole Assurances",
-    logo: "/logos/ca-assurances.png",
-    description: "Filiale assurance du Crédit Agricole avec un réseau de proximité.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Épargne"]
-  },
-  {
-    name: "BNP Paribas Cardif",
-    logo: "/logos/bnp-cardif.png",
-    description: "Spécialiste de l'assurance de personnes et des services financiers.",
-    rating: 4,
-    coverage: ["Prévoyance", "Épargne", "Santé", "Dépendance"]
-  },
-  {
-    name: "SMA",
-    logo: "/logos/sma.png",
-    description: "Société Mutuelle d'Assurance proposant des garanties complètes.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
-  },
-  {
-    name: "Matmut",
-    logo: "/logos/matmut.png",
-    description: "Mutuelle d'assurance française avec des tarifs compétitifs.",
-    rating: 4,
-    coverage: ["Multirisque", "Responsabilité", "Assistance", "Protection"]
-  },
-  {
-    name: "GMF",
-    logo: "/logos/gmf.png",
-    description: "Garantie Mutuelle des Fonctionnaires, spécialisée dans le secteur public.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
-  },
-  {
-    name: "Covéa",
-    logo: "/logos/covea.png",
-    description: "Groupe mutualiste français regroupant MAAF, MMA et GMF.",
-    rating: 4,
-    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
-  },
-  {
-    name: "Swiss Life",
-    logo: "/logos/swiss-life.png",
-    description: "Compagnie d'assurance suisse avec une forte expertise en prévoyance.",
-    rating: 4,
-    coverage: ["Prévoyance", "Épargne", "Retraite", "Santé"]
-  }
-];
+  // Partenaires assurance
+  const insurancePartners = [
+    { name: "AXA" },
+    { name: "Groupama" },
+    { name: "MAIF" },
+    { name: "MACIF" },
+    { name: "Allianz" },
+    { name: "Generali" },
+    { name: "Crédit Agricole" },
+    { name: "BNP Paribas" },
+    { name: "SMA" },
+    { name: "Matmut" },
+    { name: "GMF" },
+    { name: "Covéa" },
+    { name: "Swiss Life" }
+  ];
 
 // FAQ
 const faqData: FAQType[] = [
@@ -251,8 +173,8 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section Apple Style */}
-      <section className="hero-apple">
+      {/* Hero Section Apple Style avec fond tricolore français */}
+      <section className="hero-apple-french">
         <div className="container-apple">
           <h1>
             Serrurier d'urgence {config.primaryCity} 24h/24
@@ -274,15 +196,15 @@ export default function HomePage() {
           
           {/* Trust indicators Apple style */}
           <div className="flex flex-wrap justify-center gap-8 max-w-2xl mx-auto">
-            <div className="flex items-center gap-2 text-secondary">
+            <div className="flex items-center gap-2 text-primary">
               <CheckCircle size={20} className="text-accent" />
               <span className="text-apple-small">Intervention rapide</span>
             </div>
-            <div className="flex items-center gap-2 text-secondary">
+            <div className="flex items-center gap-2 text-primary">
               <Clock size={20} className="text-accent" />
               <span className="text-apple-small">{config.slaMinutes}</span>
             </div>
-            <div className="flex items-center gap-2 text-secondary">
+            <div className="flex items-center gap-2 text-primary">
               <Shield size={20} className="text-accent" />
               <span className="text-apple-small">Artisans vérifiés</span>
             </div>
@@ -300,40 +222,40 @@ export default function HomePage() {
       <TeamSection teamMember={teamMember} />
 
       {/* Pourquoi nous choisir */}
-      <section className="py-20 px-4 bg-white/30">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
+      <section className="why-choose-apple">
+        <div className="container-apple">
+          <h2 className="text-center mb-16">
             Pourquoi nous choisir ?
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
-                <Clock size={40} className="text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="feature-card-apple">
+              <div className="feature-icon-apple bg-gradient-to-br from-blue-500 to-blue-600">
+                <Clock size={32} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Intervention rapide</h3>
-              <p className="text-slate-700 text-lg leading-relaxed">
-                Arrivée en <span className="font-bold text-blue-600">{config.slaMinutes}</span> en moyenne. 
+              <h3 className="text-2xl font-bold text-primary mb-4">Intervention rapide</h3>
+              <p className="text-secondary text-lg leading-relaxed">
+                Arrivée en <span className="font-bold text-accent">{config.slaMinutes}</span> en moyenne. 
                 Nous comprenons l'urgence de votre situation.
               </p>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl flex items-center justify-center mx-auto mb-6 border-2 border-gray-300">
-                <Shield size={40} className="text-gray-700" />
+            <div className="feature-card-apple">
+              <div className="feature-icon-apple bg-gradient-to-br from-gray-100 to-gray-200 border-2 border-gray-300">
+                <Shield size={32} className="text-gray-700" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Artisans vérifiés</h3>
-              <p className="text-slate-700 text-lg leading-relaxed">
+              <h3 className="text-2xl font-bold text-primary mb-4">Artisans vérifiés</h3>
+              <p className="text-secondary text-lg leading-relaxed">
                 {config.content.trust.certified}. Tous nos artisans sont certifiés, assurés et passent des vérifications de sécurité rigoureuses.
               </p>
             </div>
             
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-3xl flex items-center justify-center mx-auto mb-6">
-                <Star size={40} className="text-white" />
+            <div className="feature-card-apple">
+              <div className="feature-icon-apple bg-gradient-to-br from-red-500 to-red-600">
+                <Star size={32} className="text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Disponibilité 24h/24</h3>
-              <p className="text-slate-700 text-lg leading-relaxed">
+              <h3 className="text-2xl font-bold text-primary mb-4">Disponibilité 24h/24</h3>
+              <p className="text-secondary text-lg leading-relaxed">
                 Service d'urgence disponible 7j/7, y compris les weekends et jours fériés. Votre sécurité ne prend jamais de vacances.
               </p>
             </div>
@@ -342,15 +264,32 @@ export default function HomePage() {
       </section>
 
       {/* Témoignages clients */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
+      <section className="testimonials-apple">
+        <div className="container-apple">
+          <h2 className="text-center mb-16">
             Ce que disent nos clients
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+              <div key={testimonial.id} className="testimonial-card-apple">
+                <div className="flex items-center mb-4">
+                  <div className="flex text-yellow-400 mr-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} fill="currentColor" />
+                    ))}
+                  </div>
+                  <div className="text-sm text-secondary">
+                    {testimonial.location} • {testimonial.date}
+                  </div>
+                </div>
+                <p className="text-primary text-lg leading-relaxed mb-4">
+                  "{testimonial.comment}"
+                </p>
+                <div className="font-semibold text-primary">
+                  {testimonial.name}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -375,39 +314,41 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
             Nos partenaires techniques
           </h2>
-          <PartnersMarquee 
-            partners={config.partners}
-            speed={20000}
-            pauseOnHover={true}
-            grayscale={true}
-            gap={32}
-            height={40}
-          />
+        <PartnersMarquee
+          partners={config.partners}
+          speed={15000}
+          pauseOnHover={true}
+          grayscale={false}
+          gap={24}
+          height={50}
+        />
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-4xl">
+      <section className="faq-apple">
+        <div className="container-apple">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="mb-4">
               Questions fréquentes
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-apple-large text-secondary max-w-2xl mx-auto">
               Trouvez rapidement les réponses à vos questions sur nos services de serrurerie d'urgence
             </p>
           </div>
-          <FAQ faqs={faqData} />
+          <div className="max-w-4xl mx-auto">
+            <FAQ faqs={faqData} />
+          </div>
         </div>
       </section>
 
       {/* CTA final */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 via-white to-red-600">
-        <div className="container mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8" style={{textShadow: '0 2px 4px rgba(0,0,0,0.8)'}}>
+      <section className="cta-apple">
+        <div className="container-apple">
+          <h2>
             Besoin d'un serrurier maintenant ?
           </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto font-semibold" style={{textShadow: '0 1px 2px rgba(0,0,0,0.8)'}}>
+          <p>
             Appelez-nous 24h/24 pour une intervention immédiate
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
