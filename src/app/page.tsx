@@ -11,6 +11,7 @@ import PartnersMarquee from '@/components/PartnersMarquee';
 import StatsCounter from '@/components/StatsCounter';
 import ProcessSteps from '@/components/ProcessSteps';
 import TeamSection from '@/components/TeamSection';
+import LockAnimation from '@/components/LockAnimation';
 import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { Testimonial, FAQ as FAQType } from '@/types';
@@ -161,6 +162,11 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
             🇫🇷 Serrurier d'urgence {config.primaryCity} 24h/24
           </h1>
+          
+          {/* Animation clé/serrure */}
+          <div className="flex justify-center mb-8">
+            <LockAnimation size={300} className="opacity-90" />
+          </div>
           
           <p className="text-xl md:text-2xl text-black mb-8 max-w-4xl mx-auto font-semibold">
             🛠️ Artisans français de confiance • Intervention en {config.slaMinutes}
