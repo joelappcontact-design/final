@@ -8,6 +8,9 @@ import CityGrid from '@/components/CityGrid';
 import FAQ from '@/components/FAQ';
 import TestimonialCard from '@/components/TestimonialCard';
 import PartnersMarquee from '@/components/PartnersMarquee';
+import StatsCounter from '@/components/StatsCounter';
+import ProcessSteps from '@/components/ProcessSteps';
+import TeamSection from '@/components/TeamSection';
 import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { Testimonial, FAQ as FAQType } from '@/types';
@@ -80,6 +83,70 @@ const faqData: FAQType[] = [
   },
 ];
 
+// Données pour les statistiques
+const statsData = [
+  {
+    id: 'clients',
+    number: 20000,
+    suffix: '+',
+    label: 'Clients satisfaits',
+    icon: <CheckCircle size={32} className="text-white" />
+  },
+  {
+    id: 'experience',
+    number: 15,
+    suffix: '+',
+    label: 'Années d\'expérience',
+    icon: <Clock size={32} className="text-white" />
+  },
+  {
+    id: 'technicians',
+    number: 50,
+    suffix: '+',
+    label: 'Techniciens experts',
+    icon: <Shield size={32} className="text-white" />
+  }
+];
+
+// Données pour le processus
+const processSteps = [
+  {
+    id: 'step-1',
+    number: '1',
+    title: 'Appelez-nous',
+    description: 'Expliquez votre situation (porte claquée, clé perdue, serrure cassée…).',
+    icon: <Phone size={32} className="text-white" />,
+    color: 'bg-gradient-to-br from-blue-500 to-blue-600'
+  },
+  {
+    id: 'step-2',
+    number: '2',
+    title: 'Intervention rapide',
+    description: 'Un serrurier se rend sur place en moins de 30 minutes.',
+    icon: <Clock size={32} className="text-white" />,
+    color: 'bg-gradient-to-br from-white to-gray-200 border-2 border-gray-300'
+  },
+  {
+    id: 'step-3',
+    number: '3',
+    title: 'Problème résolu',
+    description: 'Ouverture sécurisée ou remplacement de serrure immédiat.',
+    icon: <CheckCircle size={32} className="text-gray-700" />,
+    color: 'bg-gradient-to-br from-red-500 to-red-600'
+  }
+];
+
+// Données pour l'équipe
+const teamMember = {
+  id: 'chef-equipe',
+  name: 'Jean-Pierre',
+  role: 'Chef d\'équipe chez Serrurierfrancais.com',
+  image: '/team-chef.svg',
+  phone: '01 23 45 67 89',
+  description: 'Avec plus de 15 ans d\'expérience dans le domaine de la serrurerie d\'urgence, je dirige une équipe de professionnels qualifiés et passionnés. Chaque intervention est pour nous l\'occasion de vous aider et de vous rassurer dans les moments difficiles.',
+  experience: 'Plus de 15 ans d\'interventions à domicile dans toute la région parisienne'
+};
+
 export default function HomePage() {
   useEffect(() => {
     initializeTracking();
@@ -129,6 +196,15 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Statistiques */}
+      <StatsCounter stats={statsData} />
+
+      {/* Comment ça marche */}
+      <ProcessSteps steps={processSteps} />
+
+      {/* Équipe */}
+      <TeamSection teamMember={teamMember} />
 
       {/* Pourquoi nous choisir */}
       <section className="py-20 px-4 bg-white/30">
