@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 
 interface TeamMember {
   id: string;
@@ -35,13 +34,14 @@ export default function TeamSection({ teamMember, className = '' }: TeamSectionP
             {/* Photo et infos */}
             <div className="text-center lg:text-left">
               <div className="relative inline-block mb-8">
-                <div className="w-80 h-80 mx-auto lg:mx-0 relative">
-                  <Image
-                    src={teamMember.image}
-                    alt={teamMember.name}
-                    fill
-                    className="rounded-3xl object-cover shadow-2xl"
-                  />
+                <div className="w-80 h-80 mx-auto lg:mx-0 relative bg-gradient-to-br from-blue-50 to-red-50 rounded-3xl shadow-2xl flex items-center justify-center border-2 border-gray-200">
+                  <div className="text-center">
+                    <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <span className="text-white font-bold text-4xl">🔧</span>
+                    </div>
+                    <div className="text-gray-600 font-semibold text-lg">Expert Serrurerie</div>
+                    <div className="text-gray-500 text-sm">15+ années d'expérience</div>
+                  </div>
                   <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center shadow-lg">
                     <span className="text-white font-bold text-2xl">⭐</span>
                   </div>

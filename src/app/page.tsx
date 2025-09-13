@@ -141,7 +141,7 @@ const teamMember = {
   id: 'chef-equipe',
   name: 'Jean-Pierre',
   role: 'Chef d\'équipe chez Serrurierfrancais.com',
-  image: '/team-chef.svg',
+  image: '', // Plus d'image, remplacée par un avatar professionnel
   phone: '07 56 90 21 12',
   description: 'Avec plus de 15 ans d\'expérience dans le domaine de la serrurerie d\'urgence, je dirige une équipe de professionnels qualifiés et passionnés. Chaque intervention est pour nous l\'occasion de vous aider et de vous rassurer dans les moments difficiles.',
   experience: 'Plus de 15 ans d\'interventions à domicile dans toute la région parisienne'
