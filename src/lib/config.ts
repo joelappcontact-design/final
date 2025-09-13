@@ -14,7 +14,7 @@ export const config = {
 
   // USP (Unique Selling Propositions)
   usp: {
-    price: process.env.NEXT_PUBLIC_USP_1 || "Prix fixes et clairs",
+    price: process.env.NEXT_PUBLIC_USP_1 || "Service professionnel",
     instantQuote: process.env.NEXT_PUBLIC_USP_2 || "Devis instantané par photo (bientôt)",
     fastService: process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés",
   },
@@ -39,7 +39,7 @@ export const config = {
 
   // Informations légales
   legal: {
-    email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@serrurier-joel.fr",
+    email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@serrurierfrancais.com",
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "123 Rue de la Paix, 75001 Paris",
   },
 
@@ -79,11 +79,11 @@ export const config = {
   content: {
     hero: {
       title: `Serrurier d'urgence à ${process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris"}, ${process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7"}`,
-      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Prix fixes et clairs"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
+      subtitle: `${process.env.NEXT_PUBLIC_USP_1 || "Service professionnel"} • ${process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés"} • Intervention en ${process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min"}`,
     },
     trust: {
       antiFraud: "Pas de cash imposé, facture envoyée automatiquement.",
-      priceTransparency: "Pas de surprise : le prix affiché est le prix payé.",
+      priceTransparency: "Devis immédiat par téléphone.",
       certified: "Artisans certifiés et vérifiés",
     },
   },

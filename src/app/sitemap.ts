@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { config } from '@/lib/config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://serrurier-joel.fr';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://serrurierfrancais.com';
   
   // Pages statiques
   const staticPages = [

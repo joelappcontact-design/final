@@ -57,14 +57,8 @@ const faqData: FAQType[] = [
   },
   {
     id: 'faq-6',
-    question: 'Que faire en cas d\'arnaque ?',
-    answer: 'Nos prix sont fixes et affichés à l\'avance. Pas de cash imposé, facture automatique. En cas de problème, contactez-nous immédiatement. Nous avons une politique de remboursement si l\'intervention ne correspond pas à nos standards.',
-    category: 'general',
-  },
-  {
-    id: 'faq-7',
-    question: 'Proposez-vous une garantie ?',
-    answer: 'Oui, toutes nos interventions sont garanties. La durée de garantie varie selon le type d\'intervention : 30 jours pour les ouvertures, 1 an pour les changements de cylindre, 2 ans pour les installations de portes sécurisées.',
+    question: 'Comment vous contacter en urgence ?',
+    answer: 'Appelez-nous directement au 07 56 90 21 12. Nous sommes disponibles 24h/24 et 7j/7 pour toutes vos urgences de serrurerie. Pas de cash imposé, facture envoyée automatiquement.',
     category: 'general',
   },
   {

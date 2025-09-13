@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   return {
     title: `Serrurier d'urgence ${cityName} - Intervention 24h/24`,
-    description: `Serrurier d'urgence ${cityName}. Intervention rapide en ${config.slaMinutes}, prix fixes et transparents. Artisans vérifiés et certifiés.`,
+    description: `Serrurier d'urgence ${cityName}. Intervention rapide en ${config.slaMinutes}. Artisans vérifiés et certifiés.`,
     keywords: [
       `serrurier ${cityName}`,
       `serrurier urgence ${cityName}`,
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     ],
     openGraph: {
       title: `Serrurier d'urgence ${cityName} - Intervention 24h/24`,
-      description: `Serrurier d'urgence ${cityName}. Intervention rapide en ${config.slaMinutes}, prix fixes et transparents.`,
+      description: `Serrurier d'urgence ${cityName}. Intervention rapide en ${config.slaMinutes}.`,
     },
   };
 }
@@ -59,7 +59,7 @@ export default function CityPage({ params }: CityPageProps) {
   // Génération du contenu spécifique à la ville
   const cityContent = {
     name: cityName,
-    description: `Serrurier d'urgence ${cityName} - Intervention 24h/24, 7j/7. Prix fixes et transparents, artisans vérifiés.`,
+    description: `Serrurier d'urgence ${cityName} - Intervention 24h/24, 7j/7. Artisans vérifiés et qualifiés.`,
     estimatedTime: config.slaMinutes,
     zones: config.cities.filter(city => 
       city.toLowerCase().includes(cityName.toLowerCase()) || 
@@ -74,7 +74,7 @@ export default function CityPage({ params }: CityPageProps) {
     ],
     advantages: [
       'Intervention rapide en ' + config.slaMinutes,
-      'Prix fixes et transparents',
+      'Service professionnel',
       'Artisans certifiés et vérifiés',
       'Disponible 24h/24, 7j/7',
       'Frais de déplacement inclus'
@@ -91,7 +91,7 @@ export default function CityPage({ params }: CityPageProps) {
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto text-shadow">
-            Intervention 24h/24, 7j/7 • Prix fixes et transparents • Artisans vérifiés
+            Intervention 24h/24, 7j/7 • Service professionnel • Artisans vérifiés
           </p>
           
           <CallCTA variant="primary" size="lg" showWhatsApp={true} />
@@ -110,7 +110,7 @@ export default function CityPage({ params }: CityPageProps) {
               <div key={index} className="card text-center">
                 <h3 className="text-xl font-bold text-white mb-3">{service}</h3>
                 <p className="text-white/80 text-sm">
-                  Service professionnel avec garantie
+                  Service professionnel de qualité
                 </p>
               </div>
             ))}

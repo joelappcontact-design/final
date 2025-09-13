@@ -6,19 +6,18 @@ import { config, formatPrice } from '@/lib/config';
 import { PriceCard as PriceCardType } from '@/types';
 
 export const metadata: Metadata = {
-  title: 'Tarifs serrurier d\'urgence - Prix fixes et transparents',
-  description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix fixes et transparents pour ouverture de porte, changement de cylindre, installation de porte sécurisée.`,
+  title: 'Tarifs serrurier d\'urgence - Devis rapide',
+  description: `Tarifs serrurier d'urgence ${config.primaryCity}. Devis rapide pour ouverture de porte, changement de cylindre, installation de porte sécurisée.`,
   keywords: [
     'tarifs serrurier',
     'prix ouverture porte',
     'changement cylindre prix',
-    'serrurier pas cher',
-    'prix fixe serrurier',
+    'serrurier professionnel',
     'devis serrurier gratuit'
   ],
   openGraph: {
-    title: 'Tarifs serrurier d\'urgence - Prix fixes et transparents',
-    description: `Tarifs serrurier d'urgence ${config.primaryCity}. Prix fixes et transparents pour tous nos services.`,
+    title: 'Tarifs serrurier d\'urgence - Devis rapide',
+    description: `Tarifs serrurier d'urgence ${config.primaryCity}. Devis rapide pour tous nos services.`,
   },
 };
 
@@ -32,9 +31,9 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Intervention rapide',
       'Aucun dégât garanti',
-      'Prix fixe affiché',
+      'Devis immédiat',
       'Facture automatique',
-      'Garantie 30 jours'
+      'Service professionnel'
     ],
     popular: true,
   },
@@ -46,8 +45,8 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Techniques avancées',
       'Matériel spécialisé',
-      'Prix fixe affiché',
-      'Garantie intervention',
+      'Devis personnalisé',
+      'Service expert',
       'Rapport détaillé'
     ],
   },
@@ -59,9 +58,9 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Cylindre de qualité',
       'Installation incluse',
-      'Prix fixe affiché',
+      'Devis détaillé',
       'Clés fournies (3 exemplaires)',
-      'Garantie 1 an'
+      'Service professionnel'
     ],
   },
   {
@@ -72,9 +71,9 @@ const allPricingData: PriceCardType[] = [
     features: [
       'Porte blindée A2P3',
       'Installation complète',
-      'Prix fixe affiché',
+      'Devis sur mesure',
       'Clés et serrures incluses',
-      'Garantie 2 ans'
+      'Service de qualité'
     ],
   },
 ];
@@ -90,24 +89,24 @@ export default function TarifsPage() {
           </h1>
           
           <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto text-shadow">
-            Prix fixes et transparents - Pas de surprise, le prix affiché est le prix payé
+            Devis rapide et transparent - Contactez-nous pour une évaluation immédiate
           </p>
           
           <CallCTA variant="primary" size="lg" showWhatsApp={true} />
         </div>
       </section>
 
-      {/* Avantages prix fixes */}
+      {/* Nos services */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <CheckCircle size={32} className="text-gray-900" />
+                <Phone size={32} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Prix fixes</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Contact direct</h3>
               <p className="text-white/80 text-sm">
-                Aucune surprise, le prix affiché est le prix payé
+                Appelez-nous directement pour un devis immédiat
               </p>
             </div>
             
@@ -125,9 +124,9 @@ export default function TarifsPage() {
               <div className="w-16 h-16 bg-yellow-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Shield size={32} className="text-gray-900" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Artisans vérifiés</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Artisans qualifiés</h3>
               <p className="text-white/80 text-sm">
-                Tous nos artisans sont certifiés et assurés
+                Tous nos artisans sont certifiés et expérimentés
               </p>
             </div>
           </div>

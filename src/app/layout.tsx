@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     default: `Serrurier d'urgence ${config.primaryCity} 24h/24 | Appelez ${config.phoneDisplay} | Serrurierfrancais.com`,
     template: `%s | Serrurierfrancais.com`,
   },
-  description: `Serrurier d'urgence ${config.primaryCity} 24h/24. Appelez ${config.phoneDisplay} pour intervention immédiate. Prix fixes, artisans vérifiés, intervention en ${config.slaMinutes}.`,
+  description: `Serrurier d'urgence ${config.primaryCity} 24h/24. Appelez ${config.phoneDisplay} pour intervention immédiate. Artisans vérifiés, intervention en ${config.slaMinutes}.`,
   keywords: [
     'serrurierfrancais.com',
     'serrurier urgence',
