@@ -88,9 +88,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="text-sm" style={{color: '#ffffff'}}>
-                SIREN: {config.legal.siren}
-              </li>
-              <li className="text-sm" style={{color: '#ffffff'}}>
                 <a 
                   href={`mailto:${config.legal.email}`}
                   className="hover:text-yellow-400 transition-colors flex items-center gap-2"

@@ -39,7 +39,6 @@ export const config = {
 
   // Informations légales
   legal: {
-    siren: process.env.NEXT_PUBLIC_COMPANY_SIREN || "123456789",
     email: process.env.NEXT_PUBLIC_COMPANY_EMAIL || "contact@serrurier-joel.fr",
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS || "123 Rue de la Paix, 75001 Paris",
   },
