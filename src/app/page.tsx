@@ -11,6 +11,7 @@ import PartnersMarquee from '@/components/PartnersMarquee';
 import StatsCounter from '@/components/StatsCounter';
 import ProcessSteps from '@/components/ProcessSteps';
 import TeamSection from '@/components/TeamSection';
+import InsurancePartners from '@/components/InsurancePartners';
 import { config } from '@/lib/config';
 import { initializeTracking, saveGclid } from '@/lib/tracking';
 import { Testimonial, FAQ as FAQType } from '@/types';
@@ -41,6 +42,101 @@ const testimonials: Testimonial[] = [
     location: 'Boulogne-Billancourt',
     date: 'Il y a 3 jours',
   },
+];
+
+// Partenaires assurance
+const insurancePartners = [
+  {
+    name: "AXA",
+    logo: "/logos/axa.png",
+    description: "Leader français de l'assurance avec une couverture complète pour tous vos biens.",
+    rating: 5,
+    coverage: ["Vol", "Dégâts des eaux", "Incendie", "Responsabilité civile"]
+  },
+  {
+    name: "Groupama",
+    logo: "/logos/groupama.png", 
+    description: "Mutuelle d'assurance française proposant des garanties adaptées aux particuliers.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
+  },
+  {
+    name: "MAIF",
+    logo: "/logos/maif.png",
+    description: "Société d'assurance mutuelle avec des tarifs préférentiels pour ses adhérents.",
+    rating: 5,
+    coverage: ["Multirisque habitation", "Assistance", "Protection juridique", "Cyber"]
+  },
+  {
+    name: "MACIF",
+    logo: "/logos/macif.png",
+    description: "Mutuelle d'assurance française offrant des solutions personnalisées.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Épargne"]
+  },
+  {
+    name: "Allianz",
+    logo: "/logos/allianz.png",
+    description: "Compagnie d'assurance internationale avec une forte présence en France.",
+    rating: 4,
+    coverage: ["Multirisque", "Responsabilité", "Assistance", "Voyage"]
+  },
+  {
+    name: "Generali",
+    logo: "/logos/generali.png",
+    description: "Groupe d'assurance européen proposant des solutions innovantes.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
+  },
+  {
+    name: "Crédit Agricole Assurances",
+    logo: "/logos/ca-assurances.png",
+    description: "Filiale assurance du Crédit Agricole avec un réseau de proximité.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Épargne"]
+  },
+  {
+    name: "BNP Paribas Cardif",
+    logo: "/logos/bnp-cardif.png",
+    description: "Spécialiste de l'assurance de personnes et des services financiers.",
+    rating: 4,
+    coverage: ["Prévoyance", "Épargne", "Santé", "Dépendance"]
+  },
+  {
+    name: "SMA",
+    logo: "/logos/sma.png",
+    description: "Société Mutuelle d'Assurance proposant des garanties complètes.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
+  },
+  {
+    name: "Matmut",
+    logo: "/logos/matmut.png",
+    description: "Mutuelle d'assurance française avec des tarifs compétitifs.",
+    rating: 4,
+    coverage: ["Multirisque", "Responsabilité", "Assistance", "Protection"]
+  },
+  {
+    name: "GMF",
+    logo: "/logos/gmf.png",
+    description: "Garantie Mutuelle des Fonctionnaires, spécialisée dans le secteur public.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
+  },
+  {
+    name: "Covéa",
+    logo: "/logos/covea.png",
+    description: "Groupe mutualiste français regroupant MAAF, MMA et GMF.",
+    rating: 4,
+    coverage: ["Habitation", "Auto", "Santé", "Prévoyance"]
+  },
+  {
+    name: "Swiss Life",
+    logo: "/logos/swiss-life.png",
+    description: "Compagnie d'assurance suisse avec une forte expertise en prévoyance.",
+    rating: 4,
+    coverage: ["Prévoyance", "Épargne", "Retraite", "Santé"]
+  }
 ];
 
 // FAQ
@@ -270,19 +366,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Nos partenaires */}
+      {/* Nos partenaires assurance */}
+      <InsurancePartners partners={insurancePartners} />
+
+      {/* Nos partenaires techniques */}
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-12">
-            Nos partenaires de confiance
+            Nos partenaires techniques
           </h2>
           <PartnersMarquee 
             partners={config.partners}
-            speed={25000}
+            speed={20000}
             pauseOnHover={true}
-            grayscale={false}
-            gap={48}
-            height={48}
+            grayscale={true}
+            gap={32}
+            height={40}
           />
         </div>
       </section>
