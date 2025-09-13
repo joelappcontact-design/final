@@ -99,6 +99,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#6B4EFF" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        
+        {/* Ahrefs Analytics */}
+        <script 
+          src="https://analytics.ahrefs.com/analytics.js" 
+          data-key="VjubS7Tiwo6c5RrnOOvDvw" 
+          async
+        />
       </head>
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />
