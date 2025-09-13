@@ -23,7 +23,7 @@ export default function CityGrid({
   };
 
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ${className}`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 ${className}`}>
       {displayCities.map((city, index) => {
         const slug = city.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
         
@@ -33,24 +33,24 @@ export default function CityGrid({
             href={`/zones/${slug}`}
             onClick={() => handleCityClick(city)}
             className="
-              group bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-4
+              group bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-3
               hover:bg-white/15 hover:border-white/30 transition-all duration-300
               hover:scale-105 hover:shadow-lg
             "
           >
-            <div className="flex items-center gap-3 mb-2">
-              <MapPin size={20} className="text-yellow-400" />
-              <h3 className="font-semibold text-black group-hover:text-yellow-600 transition-colors">
+            <div className="flex items-center gap-2 mb-1">
+              <MapPin size={16} className="text-yellow-400" />
+              <h3 className="font-medium text-black group-hover:text-yellow-600 transition-colors text-sm">
                 {city}
               </h3>
             </div>
             
-            <div className="flex items-center gap-2 text-black text-sm">
-              <Clock size={16} />
+            <div className="flex items-center gap-1 text-black text-xs">
+              <Clock size={12} />
               <span>Intervention en {config.slaMinutes}</span>
             </div>
             
-            <div className="mt-3 text-gray-600 text-xs">
+            <div className="mt-2 text-gray-600 text-xs">
               Cliquez pour voir les détails
             </div>
           </Link>

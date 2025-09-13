@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
     name: 'Marie L.',
     rating: 5,
     comment: 'Intervention très rapide, en 30 minutes exactement. Prix respecté, aucun dégât. Je recommande vivement !',
-    location: 'Paris 15',
+    location: 'Paris',
     date: 'Il y a 2 jours',
   },
   {
@@ -264,9 +264,9 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-white/30">
         <div className="container mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
-            Nos zones d'intervention
+            Intervention dans toute l'Île-de-France
           </h2>
-          <CityGrid />
+          <CityGrid maxItems={24} />
         </div>
       </section>
 

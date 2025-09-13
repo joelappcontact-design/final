@@ -8,7 +8,7 @@ export const config = {
   siteName: process.env.NEXT_PUBLIC_SITE_NAME || "Serrurierfrancais.com",
   phone: process.env.NEXT_PUBLIC_PHONE || "+33 7 56 90 21 12",
   phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "07 56 90 21 12",
-  primaryCity: process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris",
+  primaryCity: process.env.NEXT_PUBLIC_PRIMARY_CITY || "Île-de-France",
   serviceHours: process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7",
   slaMinutes: process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min",
 
@@ -19,15 +19,28 @@ export const config = {
     fastService: process.env.NEXT_PUBLIC_USP_3 || "Intervention rapide par artisans vérifiés",
   },
 
-  // Liste des villes
+  // Liste des villes d'Île-de-France
   cities: process.env.NEXT_PUBLIC_CITY_LIST?.split(',') || [
-    "Paris 1", "Paris 2", "Paris 3", "Paris 4", "Paris 5",
-    "Paris 6", "Paris 7", "Paris 8", "Paris 9", "Paris 10",
-    "Paris 11", "Paris 12", "Paris 13", "Paris 14", "Paris 15",
-    "Paris 16", "Paris 17", "Paris 18", "Paris 19", "Paris 20",
-    "Saint-Denis", "Bobigny", "Sarcelles", "Neuilly-sur-Seine",
-    "Boulogne-Billancourt", "Issy-les-Moulineaux", "Clichy",
-    "Levallois-Perret", "Asnières-sur-Seine", "Colombes"
+    "Paris", "Boulogne-Billancourt", "Issy-les-Moulineaux", "Neuilly-sur-Seine",
+    "Levallois-Perret", "Clichy", "Asnières-sur-Seine", "Colombes",
+    "Nanterre", "Rueil-Malmaison", "Suresnes", "Puteaux",
+    "Courbevoie", "La Défense", "Saint-Cloud", "Sèvres",
+    "Meudon", "Chaville", "Vélizy-Villacoublay", "Versailles",
+    "Saint-Germain-en-Laye", "Le Chesnay", "Rambouillet", "Montigny-le-Bretonneux",
+    "Trappes", "Élancourt", "Plaisir", "Mantes-la-Jolie",
+    "Poissy", "Conflans-Sainte-Honorine", "Achères", "Cergy",
+    "Pontoise", "Argenteuil", "Sarcelles", "Garges-lès-Gonesse",
+    "Villiers-le-Bel", "Gonesse", "Roissy-en-France", "Le Bourget",
+    "Drancy", "Aubervilliers", "Saint-Denis", "La Courneuve",
+    "Épinay-sur-Seine", "Villetaneuse", "Pierrefitte-sur-Seine", "Stains",
+    "Aulnay-sous-Bois", "Sevran", "Livry-Gargan", "Le Raincy",
+    "Montfermeil", "Clichy-sous-Bois", "Neuilly-Plaisance", "Neuilly-sur-Marne",
+    "Noisy-le-Grand", "Champs-sur-Marne", "Torcy", "Lagny-sur-Marne",
+    "Chelles", "Meaux", "Melun", "Corbeil-Essonnes",
+    "Évry", "Massy", "Palaiseau", "Orsay",
+    "Les Ulis", "Morangis", "Athis-Mons", "Juvisy-sur-Orge",
+    "Viry-Châtillon", "Grigny", "Ris-Orangis", "Étampes",
+    "Dourdan", "Rambouillet", "Montigny-le-Bretonneux", "Trappes"
   ],
 
   // Tracking
