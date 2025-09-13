@@ -155,43 +155,40 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-6">
-            🇫🇷 Serrurier d'urgence {config.primaryCity} 24h/24
+      {/* Hero Section Apple Style */}
+      <section className="hero-apple">
+        <div className="container-apple">
+          <h1>
+            Serrurier d'urgence {config.primaryCity} 24h/24
           </h1>
           
-          <p className="text-xl md:text-2xl text-black mb-8 max-w-4xl mx-auto font-semibold">
-            🛠️ Artisans français de confiance • Intervention en {config.slaMinutes}
+          <p>
+            Artisans français de confiance • Intervention en {config.slaMinutes}
           </p>
           
-          
-          {/* Annonce de prix mise en avant */}
-          <div className="mb-8">
-            <div className="inline-block bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-2xl text-2xl md:text-3xl font-bold shadow-2xl border-2 border-red-500/30">
-              🔓 Ouverture de porte à partir de 39€
-            </div>
+          {/* Annonce de prix Apple style */}
+          <div className="price-apple">
+            Ouverture de porte à partir de 39€
           </div>
           
-          {/* Bouton CTA modernisé */}
+          {/* Bouton CTA Apple style */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <CallButton variant="primary" size="lg" />
           </div>
           
-          {/* Trust indicators */}
+          {/* Trust indicators Apple style */}
           <div className="flex flex-wrap justify-center gap-8 max-w-2xl mx-auto">
-            <div className="flex items-center gap-2 text-black">
-              <CheckCircle size={20} className="text-green-600" />
-              <span className="text-sm font-medium text-black">Intervention rapide</span>
+            <div className="flex items-center gap-2 text-secondary">
+              <CheckCircle size={20} className="text-accent" />
+              <span className="text-apple-small">Intervention rapide</span>
             </div>
-            <div className="flex items-center gap-2 text-black">
-              <Clock size={20} className="text-blue-600" />
-              <span className="text-sm font-medium text-black">{config.slaMinutes}</span>
+            <div className="flex items-center gap-2 text-secondary">
+              <Clock size={20} className="text-accent" />
+              <span className="text-apple-small">{config.slaMinutes}</span>
             </div>
-            <div className="flex items-center gap-2 text-black">
-              <Shield size={20} className="text-red-600" />
-              <span className="text-sm font-medium text-black">Artisans vérifiés</span>
+            <div className="flex items-center gap-2 text-secondary">
+              <Shield size={20} className="text-accent" />
+              <span className="text-apple-small">Artisans vérifiés</span>
             </div>
           </div>
         </div>
