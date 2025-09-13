@@ -6,8 +6,8 @@
 export const config = {
   // Informations générales
   siteName: process.env.NEXT_PUBLIC_SITE_NAME || "Serrurierfrancais.com",
-  phone: process.env.NEXT_PUBLIC_PHONE || "+33 1 23 45 67 89",
-  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "01 23 45 67 89",
+  phone: process.env.NEXT_PUBLIC_PHONE || "+33 7 56 90 21 12",
+  phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "07 56 90 21 12",
   primaryCity: process.env.NEXT_PUBLIC_PRIMARY_CITY || "Paris",
   serviceHours: process.env.NEXT_PUBLIC_SERVICE_HOURS || "24/7",
   slaMinutes: process.env.NEXT_PUBLIC_SLA_MINUTES || "30–45 min",
@@ -57,9 +57,9 @@ export const config = {
 
   // URLs
   urls: {
-    whatsapp: `https://wa.me/${process.env.NEXT_PUBLIC_PHONE?.replace(/[^\d]/g, '') || '33123456789'}`,
-    phone: `tel:${process.env.NEXT_PUBLIC_PHONE || '+33123456789'}`,
-    phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "01 23 45 67 89",
+    whatsapp: `https://wa.me/${process.env.NEXT_PUBLIC_PHONE?.replace(/[^\d]/g, '') || '33756902112'}`,
+    phone: `tel:${process.env.NEXT_PUBLIC_PHONE || '+33756902112'}`,
+    phoneDisplay: process.env.NEXT_PUBLIC_PHONE_DISPLAY || "07 56 90 21 12",
   },
 
   // Partenaires

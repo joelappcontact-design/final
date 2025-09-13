@@ -69,7 +69,7 @@ export default function ProcessSteps({ steps, className = '' }: ProcessStepsProp
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:0123456789" 
+                href="tel:0756902112" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors"
               >
                 📞 Appelez-nous
