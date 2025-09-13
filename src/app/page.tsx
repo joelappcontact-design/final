@@ -288,11 +288,16 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 px-4 bg-white/30">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16">
-            Questions fréquentes
-          </h2>
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Questions fréquentes
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Trouvez rapidement les réponses à vos questions sur nos services de serrurerie d'urgence
+            </p>
+          </div>
           <FAQ faqs={faqData} />
         </div>
       </section>
