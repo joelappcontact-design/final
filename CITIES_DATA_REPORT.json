@@ -1,0 +1,648 @@
+{
+  "generatedAt": "2025-09-14T00:22:41.566Z",
+  "totalCities": 99,
+  "statistics": {
+    "critical": 4,
+    "high": 23,
+    "medium": 63,
+    "low": 9
+  },
+  "departments": [
+    {
+      "code": "75",
+      "name": "Paris",
+      "citiesCount": 1
+    },
+    {
+      "code": "77",
+      "name": "Seine-et-Marne",
+      "citiesCount": 6
+    },
+    {
+      "code": "78",
+      "name": "Yvelines",
+      "citiesCount": 12
+    },
+    {
+      "code": "91",
+      "name": "Essonne",
+      "citiesCount": 14
+    },
+    {
+      "code": "92",
+      "name": "Hauts-de-Seine",
+      "citiesCount": 30
+    },
+    {
+      "code": "93",
+      "name": "Seine-Saint-Denis",
+      "citiesCount": 17
+    },
+    {
+      "code": "94",
+      "name": "Val-de-Marne",
+      "citiesCount": 10
+    },
+    {
+      "code": "95",
+      "name": "Val-d'Oise",
+      "citiesCount": 9
+    }
+  ],
+  "cities": [
+    {
+      "name": "Paris",
+      "slug": "paris",
+      "priority": "critique",
+      "population": "2165423"
+    },
+    {
+      "name": "Meaux",
+      "slug": "meaux",
+      "priority": "moyenne",
+      "population": "55000"
+    },
+    {
+      "name": "Melun",
+      "slug": "melun",
+      "priority": "moyenne",
+      "population": "40000"
+    },
+    {
+      "name": "Chelles",
+      "slug": "chelles",
+      "priority": "moyenne",
+      "population": "55000"
+    },
+    {
+      "name": "Champs-sur-Marne",
+      "slug": "champs-sur-marne",
+      "priority": "moyenne",
+      "population": "25000"
+    },
+    {
+      "name": "Torcy",
+      "slug": "torcy",
+      "priority": "moyenne",
+      "population": "23000"
+    },
+    {
+      "name": "Lagny-sur-Marne",
+      "slug": "lagny-sur-marne",
+      "priority": "moyenne",
+      "population": "21000"
+    },
+    {
+      "name": "Versailles",
+      "slug": "versailles",
+      "priority": "haute",
+      "population": "85000"
+    },
+    {
+      "name": "Saint-Germain-en-Laye",
+      "slug": "saint-germain-en-laye",
+      "priority": "moyenne",
+      "population": "40000"
+    },
+    {
+      "name": "Le Chesnay",
+      "slug": "le-chesnay",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Rambouillet",
+      "slug": "rambouillet",
+      "priority": "moyenne",
+      "population": "26000"
+    },
+    {
+      "name": "Montigny-le-Bretonneux",
+      "slug": "montigny-le-bretonneux",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Trappes",
+      "slug": "trappes",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Élancourt",
+      "slug": "elancourt",
+      "priority": "moyenne",
+      "population": "26000"
+    },
+    {
+      "name": "Plaisir",
+      "slug": "plaisir",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Mantes-la-Jolie",
+      "slug": "mantes-la-jolie",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "Poissy",
+      "slug": "poissy",
+      "priority": "moyenne",
+      "population": "38000"
+    },
+    {
+      "name": "Conflans-Sainte-Honorine",
+      "slug": "conflans-sainte-honorine",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Achères",
+      "slug": "acheres",
+      "priority": "moyenne",
+      "population": "20000"
+    },
+    {
+      "name": "Évry",
+      "slug": "evry",
+      "priority": "haute",
+      "population": "68000"
+    },
+    {
+      "name": "Massy",
+      "slug": "massy",
+      "priority": "moyenne",
+      "population": "50000"
+    },
+    {
+      "name": "Palaiseau",
+      "slug": "palaiseau",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Orsay",
+      "slug": "orsay",
+      "priority": "basse",
+      "population": "16000"
+    },
+    {
+      "name": "Les Ulis",
+      "slug": "les-ulis",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Morangis",
+      "slug": "morangis",
+      "priority": "basse",
+      "population": "12000"
+    },
+    {
+      "name": "Athis-Mons",
+      "slug": "athis-mons",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Juvisy-sur-Orge",
+      "slug": "juvisy-sur-orge",
+      "priority": "basse",
+      "population": "17000"
+    },
+    {
+      "name": "Viry-Châtillon",
+      "slug": "viry-chatillon",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Grigny",
+      "slug": "grigny",
+      "priority": "moyenne",
+      "population": "28000"
+    },
+    {
+      "name": "Ris-Orangis",
+      "slug": "ris-orangis",
+      "priority": "moyenne",
+      "population": "28000"
+    },
+    {
+      "name": "Étampes",
+      "slug": "etampes",
+      "priority": "moyenne",
+      "population": "25000"
+    },
+    {
+      "name": "Dourdan",
+      "slug": "dourdan",
+      "priority": "basse",
+      "population": "11000"
+    },
+    {
+      "name": "Corbeil-Essonnes",
+      "slug": "corbeil-essonnes",
+      "priority": "moyenne",
+      "population": "52000"
+    },
+    {
+      "name": "Boulogne-Billancourt",
+      "slug": "boulogne-billancourt",
+      "priority": "critique",
+      "population": "120071"
+    },
+    {
+      "name": "Neuilly-sur-Seine",
+      "slug": "neuilly-sur-seine",
+      "priority": "critique",
+      "population": "59940"
+    },
+    {
+      "name": "Issy-les-Moulineaux",
+      "slug": "issy-les-moulineaux",
+      "priority": "haute",
+      "population": "68000"
+    },
+    {
+      "name": "Levallois-Perret",
+      "slug": "levallois-perret",
+      "priority": "haute",
+      "population": "68000"
+    },
+    {
+      "name": "Clichy",
+      "slug": "clichy",
+      "priority": "haute",
+      "population": "62000"
+    },
+    {
+      "name": "Asnières-sur-Seine",
+      "slug": "asnieres-sur-seine",
+      "priority": "haute",
+      "population": "87000"
+    },
+    {
+      "name": "Colombes",
+      "slug": "colombes",
+      "priority": "haute",
+      "population": "85000"
+    },
+    {
+      "name": "Nanterre",
+      "slug": "nanterre",
+      "priority": "haute",
+      "population": "97000"
+    },
+    {
+      "name": "Rueil-Malmaison",
+      "slug": "rueil-malmaison",
+      "priority": "haute",
+      "population": "78000"
+    },
+    {
+      "name": "Suresnes",
+      "slug": "suresnes",
+      "priority": "moyenne",
+      "population": "48000"
+    },
+    {
+      "name": "Puteaux",
+      "slug": "puteaux",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "Courbevoie",
+      "slug": "courbevoie",
+      "priority": "haute",
+      "population": "85000"
+    },
+    {
+      "name": "La Défense",
+      "slug": "la-defense",
+      "priority": "haute",
+      "population": "25000"
+    },
+    {
+      "name": "Saint-Cloud",
+      "slug": "saint-cloud",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Sèvres",
+      "slug": "sevres",
+      "priority": "moyenne",
+      "population": "23000"
+    },
+    {
+      "name": "Meudon",
+      "slug": "meudon",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "Chaville",
+      "slug": "chaville",
+      "priority": "moyenne",
+      "population": "20000"
+    },
+    {
+      "name": "Vélizy-Villacoublay",
+      "slug": "velizy-villacoublay",
+      "priority": "moyenne",
+      "population": "20000"
+    },
+    {
+      "name": "Versailles",
+      "slug": "versailles",
+      "priority": "haute",
+      "population": "85000"
+    },
+    {
+      "name": "Saint-Germain-en-Laye",
+      "slug": "saint-germain-en-laye",
+      "priority": "moyenne",
+      "population": "40000"
+    },
+    {
+      "name": "Le Chesnay",
+      "slug": "le-chesnay",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Rambouillet",
+      "slug": "rambouillet",
+      "priority": "moyenne",
+      "population": "26000"
+    },
+    {
+      "name": "Montigny-le-Bretonneux",
+      "slug": "montigny-le-bretonneux",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Trappes",
+      "slug": "trappes",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Élancourt",
+      "slug": "elancourt",
+      "priority": "moyenne",
+      "population": "26000"
+    },
+    {
+      "name": "Plaisir",
+      "slug": "plaisir",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Mantes-la-Jolie",
+      "slug": "mantes-la-jolie",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "Poissy",
+      "slug": "poissy",
+      "priority": "moyenne",
+      "population": "38000"
+    },
+    {
+      "name": "Conflans-Sainte-Honorine",
+      "slug": "conflans-sainte-honorine",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Achères",
+      "slug": "acheres",
+      "priority": "moyenne",
+      "population": "20000"
+    },
+    {
+      "name": "Saint-Denis",
+      "slug": "saint-denis",
+      "priority": "critique",
+      "population": "111000"
+    },
+    {
+      "name": "Aubervilliers",
+      "slug": "aubervilliers",
+      "priority": "haute",
+      "population": "87000"
+    },
+    {
+      "name": "Drancy",
+      "slug": "drancy",
+      "priority": "haute",
+      "population": "72000"
+    },
+    {
+      "name": "Aulnay-sous-Bois",
+      "slug": "aulnay-sous-bois",
+      "priority": "haute",
+      "population": "85000"
+    },
+    {
+      "name": "Noisy-le-Grand",
+      "slug": "noisy-le-grand",
+      "priority": "haute",
+      "population": "68000"
+    },
+    {
+      "name": "Sevran",
+      "slug": "sevran",
+      "priority": "moyenne",
+      "population": "52000"
+    },
+    {
+      "name": "Livry-Gargan",
+      "slug": "livry-gargan",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "La Courneuve",
+      "slug": "la-courneuve",
+      "priority": "moyenne",
+      "population": "45000"
+    },
+    {
+      "name": "Épinay-sur-Seine",
+      "slug": "epinay-sur-seine",
+      "priority": "moyenne",
+      "population": "55000"
+    },
+    {
+      "name": "Pierrefitte-sur-Seine",
+      "slug": "pierrefitte-sur-seine",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Stains",
+      "slug": "stains",
+      "priority": "moyenne",
+      "population": "38000"
+    },
+    {
+      "name": "Montfermeil",
+      "slug": "montfermeil",
+      "priority": "moyenne",
+      "population": "26000"
+    },
+    {
+      "name": "Clichy-sous-Bois",
+      "slug": "clichy-sous-bois",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Neuilly-Plaisance",
+      "slug": "neuilly-plaisance",
+      "priority": "moyenne",
+      "population": "20000"
+    },
+    {
+      "name": "Neuilly-sur-Marne",
+      "slug": "neuilly-sur-marne",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Villetaneuse",
+      "slug": "villetaneuse",
+      "priority": "basse",
+      "population": "12000"
+    },
+    {
+      "name": "Le Raincy",
+      "slug": "le-raincy",
+      "priority": "basse",
+      "population": "14000"
+    },
+    {
+      "name": "Créteil",
+      "slug": "creteil",
+      "priority": "haute",
+      "population": "92000"
+    },
+    {
+      "name": "Vitry-sur-Seine",
+      "slug": "vitry-sur-seine",
+      "priority": "haute",
+      "population": "95000"
+    },
+    {
+      "name": "Champigny-sur-Marne",
+      "slug": "champigny-sur-marne",
+      "priority": "haute",
+      "population": "77000"
+    },
+    {
+      "name": "Saint-Maur-des-Fossés",
+      "slug": "saint-maur-des-fosses",
+      "priority": "haute",
+      "population": "75000"
+    },
+    {
+      "name": "Nogent-sur-Marne",
+      "slug": "nogent-sur-marne",
+      "priority": "moyenne",
+      "population": "32000"
+    },
+    {
+      "name": "Le Perreux-sur-Marne",
+      "slug": "le-perreux-sur-marne",
+      "priority": "moyenne",
+      "population": "34000"
+    },
+    {
+      "name": "Bry-sur-Marne",
+      "slug": "bry-sur-marne",
+      "priority": "basse",
+      "population": "17000"
+    },
+    {
+      "name": "Villeneuve-Saint-Georges",
+      "slug": "villeneuve-saint-georges",
+      "priority": "moyenne",
+      "population": "35000"
+    },
+    {
+      "name": "Sucy-en-Brie",
+      "slug": "sucy-en-brie",
+      "priority": "moyenne",
+      "population": "27000"
+    },
+    {
+      "name": "Boissy-Saint-Léger",
+      "slug": "boissy-saint-leger",
+      "priority": "basse",
+      "population": "17000"
+    },
+    {
+      "name": "Cergy",
+      "slug": "cergy",
+      "priority": "haute",
+      "population": "65000"
+    },
+    {
+      "name": "Pontoise",
+      "slug": "pontoise",
+      "priority": "moyenne",
+      "population": "30000"
+    },
+    {
+      "name": "Argenteuil",
+      "slug": "argenteuil",
+      "priority": "haute",
+      "population": "110000"
+    },
+    {
+      "name": "Sarcelles",
+      "slug": "sarcelles",
+      "priority": "haute",
+      "population": "60000"
+    },
+    {
+      "name": "Garges-lès-Gonesse",
+      "slug": "garges-les-gonesse",
+      "priority": "moyenne",
+      "population": "42000"
+    },
+    {
+      "name": "Villiers-le-Bel",
+      "slug": "villiers-le-bel",
+      "priority": "moyenne",
+      "population": "28000"
+    },
+    {
+      "name": "Gonesse",
+      "slug": "gonesse",
+      "priority": "moyenne",
+      "population": "25000"
+    },
+    {
+      "name": "Roissy-en-France",
+      "slug": "roissy-en-france",
+      "priority": "basse",
+      "population": "2500"
+    },
+    {
+      "name": "Le Bourget",
+      "slug": "le-bourget",
+      "priority": "moyenne",
+      "population": "15000"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
 {
-  "/page": "app/page.js"
+  "/serrurier-chaumes-en-brie/page": "app/serrurier-chaumes-en-brie/page.js",
+  "/serrurier-paris/page": "app/serrurier-paris/page.js"
 }

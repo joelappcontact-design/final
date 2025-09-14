@@ -1,0 +1,39 @@
+import CityPage from '@/components/CityPage';
+
+const cityData = {
+  name: 'Sèvres',
+  department: '92',
+  population: '23000',
+  priority: 'moyenne',
+  zones: ['Centre-ville', 'Quartier de la République', 'Quartier de la Gare', 'Quartier du Parc'],
+  description: 'Serrurier d\'urgence Sèvres 24h/24. Intervention rapide dans tous les quartiers. Artisans vérifiés, service de qualité.',
+  keywords: ['serrurier sevres', 'serrurier urgence sevres', 'ouverture porte sevres', 'serrurier 24h sevres', 'dépannage serrure sevres']
+};
+
+export default function Page() {
+  return <CityPage 
+    cityName="Sèvres"
+    citySlug="sevres"
+    zones={['Centre-ville', 'Quartier de la République', 'Quartier de la Gare', 'Quartier du Parc']}
+    description="Sèvres - Serrurier d'urgence 24h/24. Intervention rapide dans tous les quartiers. Artisans vérifiés, service de qualité."
+    keywords={["serrurier sevres", "serrurier urgence sevres", "ouverture porte sevres", "serrurier 24h sevres", "dépannage serrure sevres"]}
+  />;
+}
+
+export async function generateMetadata() {
+  return {
+    title: `Serrurier d'urgence ${cityData.name} 24h/24 - Intervention rapide`,
+    description: cityData.description,
+    keywords: cityData.keywords.join(', '),
+    openGraph: {
+      title: `Serrurier d'urgence ${cityData.name} 24h/24`,
+      description: cityData.description,
+      type: 'website',
+      locale: 'fr_FR',
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
