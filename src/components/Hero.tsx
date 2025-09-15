@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Phone, Clock, Shield, Users, Award, CheckCircle } from 'lucide-react';
+import { Phone, Clock, Shield, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
@@ -21,22 +21,22 @@ const Hero = () => {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-12 h-12" />,
       number: '25 000+',
       label: 'Clients satisfaits'
     },
     {
-      icon: <Award className="w-8 h-8" />,
+      icon: <Award className="w-12 h-12" />,
       number: '15+',
       label: 'Années d\'expérience'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-12 h-12" />,
       number: '75+',
       label: 'Techniciens experts'
     },
     {
-      icon: <CheckCircle className="w-8 h-8" />,
+      icon: <CheckCircle className="w-12 h-12" />,
       number: '50 000+',
       label: 'Interventions réussies'
     }
@@ -46,28 +46,26 @@ const Hero = () => {
     <section className="relative min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-purple-800 text-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-20 left-10 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-60 h-60 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-white rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 pt-20 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
         {/* Header Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-wrap items-center justify-between mb-12"
+          className="flex flex-wrap items-center justify-center gap-8 mb-16"
         >
-          <div className="flex items-center space-x-4 mb-4">
-            <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5 text-yellow-300" />
-              <span className="text-sm font-semibold">30-45 min</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-yellow-300" />
-              <span className="text-sm font-semibold">Certifié</span>
-            </div>
+          <div className="flex items-center space-x-3">
+            <Clock className="w-6 h-6 text-yellow-300" />
+            <span className="text-lg font-semibold">30-45 min</span>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Shield className="w-6 h-6 text-yellow-300" />
+            <span className="text-lg font-semibold">Certifié</span>
           </div>
         </motion.div>
 
@@ -76,9 +74,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mb-8"
+          className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             <span className="text-blue-200">Serrurier d'urgence</span>
             <br />
             <span className="text-pink-400">Île-de-France</span>
@@ -86,11 +84,11 @@ const Hero = () => {
             <span className="text-white">24h/24</span>
           </h1>
           
-          <div className="text-lg md:text-xl text-blue-100 mb-4">
+          <div className="text-xl md:text-2xl text-blue-100 mb-6 max-w-4xl mx-auto">
             Intervention rapide • Artisans vérifiés • Prix transparents
           </div>
           
-          <div className="text-2xl md:text-3xl font-bold text-yellow-300">
+          <div className="text-3xl md:text-4xl font-bold text-yellow-300">
             Arrivée en 30-45 min
           </div>
         </motion.div>
@@ -100,12 +98,12 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center mb-12"
+          className="text-center mb-20"
         >
-          <div className="inline-block bg-blue-500/90 backdrop-blur-sm rounded-3xl px-8 py-6 shadow-2xl">
-            <div className="text-white text-lg mb-2">À partir de</div>
-            <div className="text-4xl md:text-5xl font-bold text-yellow-300">39€</div>
-            <div className="text-white text-sm mt-2">Ouverture de porte simple</div>
+          <div className="inline-block bg-blue-500/90 backdrop-blur-sm rounded-3xl px-12 py-8 shadow-2xl">
+            <div className="text-white text-xl mb-3">À partir de</div>
+            <div className="text-5xl md:text-6xl font-bold text-yellow-300">39€</div>
+            <div className="text-white text-lg mt-3">Ouverture de porte simple</div>
           </div>
         </motion.div>
 
@@ -114,22 +112,23 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-24"
         >
           <motion.a
             href="tel:0756902112"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-xl transition-all duration-300 flex items-center gap-3 shadow-2xl hover:shadow-3xl w-full sm:w-auto justify-center"
+            className="group bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-10 py-5 rounded-2xl font-bold text-2xl transition-all duration-300 flex items-center gap-4 shadow-2xl hover:shadow-3xl w-full sm:w-auto justify-center"
           >
-            <Phone className="w-6 h-6" />
+            <Phone className="w-7 h-7" />
             <span>Appeler 07 56 90 21 12</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
           </motion.a>
           
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded-2xl font-semibold text-xl transition-all duration-300 w-full sm:w-auto"
+            className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border-2 border-white/30 text-white px-10 py-5 rounded-2xl font-semibold text-2xl transition-all duration-300 w-full sm:w-auto"
           >
             07 56 90 21 12
           </motion.button>
@@ -140,36 +139,36 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mb-16"
+          className="mb-20"
         >
-          <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Des chiffres qui parlent
             </h2>
-            <p className="text-lg md:text-xl text-blue-100">
+            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
               Plus de 15 ans d'excellence au service de l'Île-de-France
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center group hover:bg-white/20 transition-all duration-300"
+                whileHover={{ y: -12 }}
+                className="group bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center hover:bg-white/20 transition-all duration-300"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <div className="text-yellow-300">
                     {stat.icon}
                   </div>
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-3">
                   {stat.number}
                 </div>
-                <div className="text-blue-100 text-sm md:text-base font-semibold">
+                <div className="text-blue-100 text-lg font-semibold">
                   {stat.label}
                 </div>
               </motion.div>
@@ -182,31 +181,31 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
-          className="bg-blue-800/50 backdrop-blur-sm rounded-3xl p-6 md:p-8"
+          className="bg-blue-800/50 backdrop-blur-sm rounded-3xl p-10"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-green-500 rounded-full flex items-center justify-center">
-                <CheckCircle className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 mx-auto mb-6 bg-green-500 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Intervention rapide</h3>
-              <p className="text-blue-100">En 30-45 min</p>
+              <h3 className="text-2xl font-bold text-white mb-3">Intervention rapide</h3>
+              <p className="text-blue-100 text-lg">En 30-45 min</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-blue-500 rounded-full flex items-center justify-center">
-                <Shield className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 mx-auto mb-6 bg-blue-500 rounded-full flex items-center justify-center">
+                <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Artisans vérifiés</h3>
-              <p className="text-blue-100">Certifiés & assurés</p>
+              <h3 className="text-2xl font-bold text-white mb-3">Artisans vérifiés</h3>
+              <p className="text-blue-100 text-lg">Certifiés & assurés</p>
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 mx-auto mb-4 bg-purple-500 rounded-full flex items-center justify-center">
-                <Clock className="w-8 h-8 text-white" />
+              <div className="w-20 h-20 mx-auto mb-6 bg-purple-500 rounded-full flex items-center justify-center">
+                <Clock className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Disponible 24h/24</h3>
-              <p className="text-blue-100">7j/7, 365j/an</p>
+              <h3 className="text-2xl font-bold text-white mb-3">Disponible 24h/24</h3>
+              <p className="text-blue-100 text-lg">7j/7, 365j/an</p>
             </div>
           </div>
         </motion.div>

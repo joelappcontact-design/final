@@ -21,6 +21,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -30,6 +31,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   font-weight: 400;
+  font-size: 1rem;
 }
 
 /* Mobile-first utilities */
@@ -85,8 +87,12 @@ a:focus {
 
 /* Mobile optimizations */
 @media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
   body {
-    font-size: 16px;
+    font-size: 0.875rem;
   }
   
   h1 {
@@ -105,16 +111,68 @@ a:focus {
   }
 }
 
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+  
+  body {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+  
+  body {
+    font-size: 1rem;
+  }
+}
+
 /* Button hover effects */
 .btn-primary {
-  @apply bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
+  @apply bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
 }
 
 .btn-secondary {
-  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl;
 }
 
 /* Card hover effects */
 .card-hover {
   @apply transition-all duration-300 hover:shadow-2xl hover:-translate-y-2;
+}
+
+/* Spacing utilities */
+.section-padding {
+  @apply py-24;
+}
+
+.container-padding {
+  @apply px-6;
+}
+
+/* Typography scale */
+.text-display {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+}
+
+.text-heading {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+}
+
+.text-subheading {
+  @apply text-xl md:text-2xl font-semibold;
+}
+
+.text-body {
+  @apply text-lg md:text-xl;
+}
+
+.text-small {
+  @apply text-base md:text-lg;
 }
