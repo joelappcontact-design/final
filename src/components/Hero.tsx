@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Phone, Clock, Shield, Star, ChevronDown, Sparkles } from 'lucide-react';
+import { Phone, ArrowRight, Shield, Clock, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [currentCity, setCurrentCity] = useState('Paris');
-  const cities = ['Paris', 'Lyon', 'Marseille', 'Toulouse', 'Nice', 'Nantes', 'Strasbourg', 'Montpellier'];
+  const cities = ['Paris', 'Boulogne-Billancourt', 'Nanterre', 'Asnières-sur-Seine', 'Colombes', 'Courbevoie'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,140 +19,53 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const features = [
-    {
-       icon: <Clock className="w-6 h-6 text-blue-400" />,
-      title: 'Intervention rapide',
-      description: '30-45 minutes'
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-blue-400" />,
-      title: 'Artisans certifiés',
-      description: 'Professionnels vérifiés'
-    },
-    {
-      icon: <Star className="w-6 h-6 text-blue-400" />,
-      title: 'Service 24h/24',
-      description: 'Disponible tous les jours'
-    }
-  ];
-
   return (
-    <section id="accueil" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Premium Background Gradient */}
-      <div className="absolute inset-0 gradient-hero" />
+    <section className="relative min-h-screen bg-black text-white overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
       
-      {/* Animated Geometric Shapes */}
-      <div className="absolute inset-0">
-        {[...Array(15)].map((_, i) => (
-          <motion.div
-            key={i}
-             className="absolute w-3 h-3 bg-blue-400/20 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -120, 0],
-              opacity: [0, 0.8, 0],
-              scale: [0.5, 1, 0.5],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-            }}
-          />
-        ))}
-        
-        {/* Floating geometric elements */}
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={`shape-${i}`}
-             className="absolute w-16 h-16 border border-blue-400/10 rounded-2xl"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              rotate: [0, 360],
-              opacity: [0.1, 0.3, 0.1],
-            }}
-            transition={{
-              duration: 20 + Math.random() * 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-          />
-        ))}
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="h-full w-full bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-12"
-        >
-          {/* Logo and Brand */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 pt-32 pb-20">
+        <div className="text-center">
+          {/* Main headline */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="flex justify-center mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
           >
-             <div className="glass rounded-3xl p-8 shadow-apple-lg">
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
-                  <Shield className="w-12 h-12 text-white" />
-                </div>
-                <h2 className="text-2xl font-bold text-white mb-2">SERRURIER FRANÇAIS</h2>
-                <p className="text-blue-200 text-sm">.com</p>
-              </div>
+            <h1 className="text-6xl md:text-8xl font-thin tracking-tight mb-4">
+              Serrurier d'urgence
+            </h1>
+            <div className="text-2xl md:text-3xl font-light text-gray-300">
+              à <span className="text-white font-medium">{currentCity}</span>
             </div>
           </motion.div>
-
-          {/* Main Title */}
-          <div className="space-y-6">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl sm:text-6xl lg:text-8xl font-bold text-white tracking-tight"
-            >
-              Serrurier d'urgence
-            </motion.h1>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white/90"
-            >
-               à <span className="text-yellow-400 animate-pulse-slow font-bold">{currentCity}</span>
-            </motion.div>
-          </div>
 
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-xl sm:text-2xl lg:text-3xl text-white/80 max-w-4xl mx-auto font-light"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl md:text-2xl text-gray-400 font-light mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Intervention 24h/24 • Artisans vérifiés • 30-45 min
           </motion.p>
 
-          {/* Price Badge */}
+          {/* Price */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            className="inline-block"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="mb-16"
           >
-             <div className="glass rounded-full px-12 py-6 border-2 border-yellow-400/30 shadow-apple">
-              <span className="text-3xl sm:text-4xl font-bold text-white">
-                À partir de <span className="text-yellow-400">39€</span>
+            <div className="inline-block bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-4">
+              <span className="text-3xl md:text-4xl font-light text-white">
+                À partir de <span className="font-semibold text-blue-400">39€</span>
               </span>
             </div>
           </motion.div>
@@ -161,77 +74,96 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.1 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
           >
             <motion.a
               href="tel:0756902112"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-               className="btn-apple flex items-center space-x-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-12 py-6 rounded-2xl font-bold text-xl shadow-apple-lg animate-glow"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="group bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 flex items-center gap-3 shadow-lg hover:shadow-xl"
             >
-              <Phone className="w-7 h-7" />
+              <Phone className="w-5 h-5" />
               <span>Appeler maintenant</span>
-              <Sparkles className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </motion.a>
             
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="glass text-white px-12 py-6 rounded-2xl font-semibold text-xl hover:bg-white/20 transition-all duration-300 shadow-apple"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-xl border border-white/20 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
             >
               Voir le numéro
             </motion.button>
           </motion.div>
 
-          {/* Feature Cards */}
+          {/* Features */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20"
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
-            {features.map((feature, index) => (
+            {[
+              {
+                icon: <Clock className="w-8 h-8" />,
+                title: 'Intervention rapide',
+                description: '30-45 minutes'
+              },
+              {
+                icon: <Shield className="w-8 h-8" />,
+                title: 'Artisans certifiés',
+                description: 'Professionnels vérifiés'
+              },
+              {
+                icon: <Star className="w-8 h-8" />,
+                title: 'Service 24h/24',
+                description: 'Disponible tous les jours'
+              }
+            ].map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.5 + index * 0.2 }}
-                whileHover={{ scale: 1.05, y: -8 }}
-                 className="glass rounded-3xl p-8 text-center hover:bg-blue-500/20 transition-all duration-500 shadow-apple"
+                transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+                className="text-center group"
               >
-                <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
+                <div className="w-16 h-16 mx-auto mb-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-all duration-300">
+                  <div className="text-blue-400">
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-xl font-medium text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-white/80 text-lg">
+                <p className="text-gray-400 text-lg">
                   {feature.description}
                 </p>
               </motion.div>
             ))}
           </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1.8 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="text-white/60"
-            >
-              <ChevronDown className="w-8 h-8" />
-            </motion.div>
-          </motion.div>
-        </motion.div>
+        </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1.5 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1 h-3 bg-white/60 rounded-full mt-2"
+          />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

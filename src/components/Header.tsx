@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, Key } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Header = () => {
@@ -19,7 +19,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Accueil', href: '#accueil' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Services', href: '#services' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -27,39 +27,36 @@ const Header = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'glass-dark backdrop-blur-xl shadow-apple-lg'
+          ? 'bg-black/80 backdrop-blur-xl border-b border-white/10'
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.02 }}
             className="flex items-center space-x-3"
           >
-             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
-              <Key className="w-7 h-7 text-white" />
+            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+              <div className="w-4 h-4 bg-black rounded-sm"></div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-lg lg:text-xl font-bold text-white">
-                SERRURIER FRANÇAIS
-              </span>
-               <span className="text-xs text-blue-300">.com</span>
-            </div>
+            <span className="text-xl font-medium text-white">
+              Serrurier Français
+            </span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.a
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-white/80 hover:text-white font-medium transition-colors duration-300 text-lg"
+                className="text-white/80 hover:text-white font-light transition-colors duration-300"
               >
                 {item.name}
               </motion.a>
@@ -71,16 +68,16 @@ const Header = () => {
             href="tel:0756902112"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-             className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-apple hover:shadow-apple-lg transition-all duration-300"
+            className="hidden md:flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            <Phone className="w-5 h-5" />
-            <span>Appeler maintenant</span>
+            <Phone className="w-4 h-4" />
+            <span>Appeler</span>
           </motion.a>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-3 rounded-2xl text-white hover:bg-white/10 transition-colors duration-300"
+            className="md:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-300"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -98,7 +95,7 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden glass-dark rounded-3xl mt-4 p-6 shadow-apple-lg"
+              className="md:hidden bg-black/90 backdrop-blur-xl rounded-2xl mt-4 p-6 border border-white/10"
             >
               <nav className="flex flex-col space-y-6">
                 {navItems.map((item) => (
@@ -106,16 +103,16 @@ const Header = () => {
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white/80 hover:text-white font-medium transition-colors duration-300 text-lg"
+                    className="text-white/80 hover:text-white font-light transition-colors duration-300 text-lg"
                   >
                     {item.name}
                   </a>
                 ))}
                 <a
                   href="tel:0756902112"
-                   className="flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-apple"
+                  className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium shadow-lg"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-4 h-4" />
                   <span>Appeler maintenant</span>
                 </a>
               </nav>

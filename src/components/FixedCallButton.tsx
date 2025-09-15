@@ -10,7 +10,6 @@ const FixedCallButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Afficher le bouton après avoir scrollé de 300px
       setIsVisible(window.scrollY > 300);
     };
 
@@ -29,13 +28,13 @@ const FixedCallButton = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="mb-4 glass rounded-2xl p-6 shadow-apple-lg border border-white/20"
+            className="mb-4 bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-gray-200"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-bold text-white">Besoin d'aide ?</h3>
+              <h3 className="text-lg font-medium text-black">Besoin d'aide ?</h3>
               <button
                 onClick={() => setIsExpanded(false)}
-                className="text-white/60 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -44,9 +43,9 @@ const FixedCallButton = () => {
             <div className="space-y-3">
               <motion.a
                 href="tel:0756902112"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-3 rounded-xl font-semibold shadow-apple"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 <span>Appeler maintenant</span>
@@ -54,9 +53,9 @@ const FixedCallButton = () => {
               
               <motion.a
                 href="https://wa.me/0756902112"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-3 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-3 rounded-xl font-semibold shadow-apple"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp</span>
@@ -70,9 +69,9 @@ const FixedCallButton = () => {
         onClick={() => setIsExpanded(!isExpanded)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-apple-lg hover:shadow-apple-lg transition-all duration-300 animate-pulse-slow"
+        className="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300"
       >
-        <Phone className="w-8 h-8 text-white" />
+        <Phone className="w-6 h-6 text-white" />
       </motion.button>
     </div>
   );
