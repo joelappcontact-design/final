@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, MessageCircle, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin, Clock, Shield, Award } from 'lucide-react';
 
 const Contact = () => {
   const contactMethods = [
@@ -12,7 +12,8 @@ const Contact = () => {
       action: '07 56 90 21 12',
       href: 'tel:0756902112',
       primary: true,
-      color: 'bg-green-500'
+      color: 'from-green-500 to-green-600',
+      bgColor: 'bg-green-500'
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
@@ -21,7 +22,8 @@ const Contact = () => {
       action: 'Envoyer un message',
       href: 'https://wa.me/0756902112',
       primary: false,
-      color: 'bg-green-600'
+      color: 'from-blue-500 to-blue-600',
+      bgColor: 'bg-blue-500'
     },
     {
       icon: <Mail className="w-8 h-8" />,
@@ -30,7 +32,8 @@ const Contact = () => {
       action: 'contact@serrurierfrancais.com',
       href: 'mailto:contact@serrurierfrancais.com',
       primary: false,
-      color: 'bg-blue-500'
+      color: 'from-purple-500 to-purple-600',
+      bgColor: 'bg-purple-500'
     }
   ];
 
@@ -41,8 +44,23 @@ const Contact = () => {
     'Pantin', 'Montreuil', 'Bagnolet', 'Les Lilas', 'Le Pré-Saint-Gervais'
   ];
 
+  const guarantees = [
+    {
+      icon: <Shield className="w-6 h-6" />,
+      text: 'Artisans certifiés'
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      text: 'Intervention 30-45 min'
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      text: 'Garantie 2 ans'
+    }
+  ];
+
   return (
-    <section id="contact" className="py-16 bg-white">
+    <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <motion.div
@@ -50,18 +68,18 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Contactez-nous
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
             Besoin d'une intervention ? Nous sommes là pour vous aider 24h/24
           </p>
         </motion.div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {contactMethods.map((method, index) => (
             <motion.div
               key={index}
@@ -73,15 +91,11 @@ const Contact = () => {
               className={`group bg-white rounded-3xl p-8 transition-all duration-500 border-2 ${
                 method.primary 
                   ? 'border-yellow-400 shadow-2xl hover:shadow-3xl' 
-                  : 'border-gray-200 hover:border-gray-300 shadow-lg hover:shadow-xl'
+                  : 'border-gray-200 hover:border-gray-300 shadow-xl hover:shadow-2xl'
               }`}
             >
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
-                method.primary 
-                  ? 'bg-yellow-400' 
-                  : method.color
-              } group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-20 h-20 ${method.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <div className="text-white">
                   {method.icon}
                 </div>
@@ -103,7 +117,7 @@ const Contact = () => {
                 className={`inline-flex items-center justify-center w-full px-6 py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                   method.primary
                     ? 'bg-yellow-400 hover:bg-yellow-500 text-gray-900 shadow-lg hover:shadow-xl'
-                    : `${method.color} hover:opacity-90 text-white shadow-lg hover:shadow-xl`
+                    : `bg-gradient-to-r ${method.color} text-white shadow-lg hover:shadow-xl`
                 }`}
               >
                 {method.action}
@@ -111,6 +125,44 @@ const Contact = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Guarantees */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-8 mb-16"
+        >
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Nos Garanties
+            </h3>
+            <p className="text-lg text-gray-600">
+              Un service de qualité avec des garanties solides
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {guarantees.map((guarantee, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center justify-center space-x-3 bg-white rounded-2xl p-6 shadow-lg"
+              >
+                <div className="text-blue-600">
+                  {guarantee.icon}
+                </div>
+                <span className="text-lg font-semibold text-gray-900">
+                  {guarantee.text}
+                </span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Zones d'intervention */}
         <motion.div
@@ -120,14 +172,14 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h3 className="text-4xl font-bold text-gray-900 mb-6">
             Zones d'intervention
           </h3>
-          <p className="text-lg text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-8">
             Nous intervenons dans toute l'Île-de-France
           </p>
           
-          <div className="bg-gray-50 rounded-3xl p-8 shadow-lg">
+          <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-8 shadow-xl">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {zones.map((zone, index) => (
                 <motion.div
@@ -136,7 +188,7 @@ const Contact = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.3, delay: index * 0.02 }}
                   viewport={{ once: true }}
-                  className="bg-white hover:bg-blue-50 rounded-xl px-4 py-3 text-center transition-colors duration-300 border border-gray-200 hover:border-blue-300"
+                  className="bg-white hover:bg-blue-50 rounded-xl px-4 py-3 text-center transition-colors duration-300 border border-gray-200 hover:border-blue-300 shadow-sm hover:shadow-md"
                 >
                   <span className="text-gray-700 font-semibold">{zone}</span>
                 </motion.div>
@@ -153,11 +205,11 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl p-8 md:p-12 text-white">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
+          <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-3xl p-12 text-white">
+            <h3 className="text-4xl md:text-5xl font-bold mb-6">
               🚨 URGENCE ?
             </h3>
-            <p className="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
               Intervention en 30-45 minutes partout en Île-de-France
             </p>
             <motion.a

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Shield, Award, CheckCircle } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,8 +38,23 @@ const Footer = () => {
     'Dépannage urgence'
   ];
 
+  const guarantees = [
+    {
+      icon: <Shield className="w-5 h-5" />,
+      text: 'Artisans certifiés'
+    },
+    {
+      icon: <Clock className="w-5 h-5" />,
+      text: 'Intervention 30-45 min'
+    },
+    {
+      icon: <Award className="w-5 h-5" />,
+      text: 'Garantie 2 ans'
+    }
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
@@ -52,17 +67,34 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                <div className="w-6 h-6 bg-white rounded-sm"></div>
+              <div className="relative">
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gray-900 rounded-sm"></div>
+                </div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                  <div className="w-2 h-2 bg-white rounded-full"></div>
+                </div>
               </div>
               <span className="text-2xl font-bold">
-                Serrurier Français
+                SERRURIER FRANCAIS.COM
               </span>
             </div>
-            <p className="text-gray-400 mb-8 leading-relaxed text-lg">
+            <p className="text-gray-300 mb-8 leading-relaxed text-lg">
               Votre serrurier d'urgence de confiance en Île-de-France. 
               Intervention rapide, artisans certifiés, service 24h/24.
             </p>
+            
+            {/* Guarantees */}
+            <div className="space-y-3">
+              {guarantees.map((guarantee, index) => (
+                <div key={index} className="flex items-center space-x-3">
+                  <div className="text-yellow-400">
+                    {guarantee.icon}
+                  </div>
+                  <span className="text-gray-300 text-sm">{guarantee.text}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
           {/* Contact Info */}
@@ -73,15 +105,15 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Contact</h3>
+            <h3 className="text-2xl font-bold mb-6">Contact</h3>
             <div className="space-y-4">
               {contactInfo.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors duration-300 group"
+                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-300 group"
                 >
-                  <div className="text-gray-500 group-hover:text-white transition-colors duration-300">
+                  <div className="text-gray-400 group-hover:text-yellow-400 transition-colors duration-300">
                     {item.icon}
                   </div>
                   <span className="text-lg">{item.text}</span>
@@ -98,13 +130,13 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Services</h3>
+            <h3 className="text-2xl font-bold mb-6">Services</h3>
             <div className="grid grid-cols-1 gap-3">
               {services.map((service, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300 text-lg"
+                  className="text-gray-300 hover:text-white transition-colors duration-300 text-lg"
                 >
                   {service}
                 </a>
@@ -120,7 +152,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Urgence ?</h3>
+            <h3 className="text-2xl font-bold mb-6">Urgence ?</h3>
             <div className="space-y-6">
               <motion.a
                 href="tel:0756902112"
@@ -136,7 +168,7 @@ const Footer = () => {
                 <div className="text-3xl font-bold text-white mb-2">
                   07 56 90 21 12
                 </div>
-                <div className="text-gray-400 text-lg">
+                <div className="text-gray-300 text-lg">
                   Appel gratuit
                 </div>
               </div>
@@ -146,7 +178,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-gray-400 text-lg">
