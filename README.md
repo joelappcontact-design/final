@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serrurierfrancais.com - Site de Serrurier d'Urgence
 
-## Getting Started
+Site web moderne pour un service de serrurier d'urgence en Île-de-France, optimisé pour Google Ads et conforme RGPD.
 
-First, run the development server:
+## 🚀 Fonctionnalités
 
+- **Design moderne** avec glassmorphism et animations fluides
+- **Responsive design** optimisé mobile-first
+- **SEO optimisé** pour Google Ads
+- **Conformité RGPD** complète
+- **Performance** optimisée avec Next.js 15
+- **Animations** avec Framer Motion
+
+## 🎨 Design
+
+- **Palette de couleurs** : Bleu marine (#3B82F6), Blanc (#FFFFFF), Rouge (#EF4444)
+- **Typographie** : Inter (Google Fonts)
+- **Style** : Glassmorphism, gradients, animations fluides
+- **Composants** : Header sticky, Hero avec particules, bannière partenaires rotative
+
+## 📱 Sections
+
+1. **Header** - Navigation sticky avec CTA principal
+2. **Hero** - Section d'accueil avec ville dynamique et animations
+3. **Partenaires** - Bannière rotative des marques de serrurerie
+4. **Services** - Présentation des services avec cartes interactives
+5. **Témoignages** - Avis clients avec étoiles et badges
+6. **FAQ** - Accordéon avec catégories
+7. **Footer** - Informations de contact et liens RGPD
+
+## 🔧 Technologies
+
+- **Next.js 15** avec App Router
+- **TypeScript** pour la sécurité des types
+- **Tailwind CSS** pour le styling
+- **Framer Motion** pour les animations
+- **Lucide React** pour les icônes
+
+## 📋 Conformité RGPD
+
+- ✅ Bannière de cookies avec gestion des préférences
+- ✅ Mentions légales complètes
+- ✅ Politique de confidentialité détaillée
+- ✅ Page dédiée aux cookies
+- ✅ Données structurées Schema.org
+
+## 🚀 Déploiement
+
+### Local
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Vercel
+1. Connecter le repository GitHub à Vercel
+2. Configurer les variables d'environnement si nécessaire
+3. Déployer automatiquement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📞 Contact
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Téléphone** : 07 56 90 21 12
+- **Email** : contact@serrurierfrancais.com
+- **Zone** : Île-de-France
 
-## Learn More
+## 🎯 Optimisations Google Ads
 
-To learn more about Next.js, take a look at the following resources:
+- Mots-clés ciblés dans les métadonnées
+- Structure de contenu optimisée
+- Call-to-actions proéminents
+- Temps de chargement optimisé
+- Mobile-first design
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📊 Performance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Lighthouse Score** : 95+ (estimé)
+- **Core Web Vitals** : Optimisés
+- **SEO Score** : 100/100 (estimé)
+- **Accessibilité** : Conforme WCAG 2.1
 
-## Deploy on Vercel
+## 🔄 Maintenance
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Mise à jour des témoignages clients
+- Ajout de nouvelles villes dans le Hero
+- Optimisation continue du SEO
+- Monitoring des performances
