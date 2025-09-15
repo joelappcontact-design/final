@@ -63,8 +63,8 @@ const CookieBanner = () => {
             {!showSettings ? (
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Cookie className="w-6 h-6 text-primary-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Cookie className="w-6 h-6 text-blue-600" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -84,7 +84,7 @@ const CookieBanner = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       onClick={acceptAll}
-                      className="bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg transition-all duration-300"
+                      className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg transition-all duration-300"
                     >
                       Accepter tout
                     </motion.button>
@@ -102,7 +102,7 @@ const CookieBanner = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setShowSettings(true)}
-                    className="flex items-center space-x-2 text-primary-600 hover:text-primary-700 font-semibold text-sm transition-colors duration-200"
+                    className="flex items-center space-x-2 text-blue-600 hover:text-blue-700 font-semibold text-sm transition-colors duration-200"
                   >
                     <Settings className="w-4 h-4" />
                     <span>Personnaliser</span>
@@ -153,7 +153,7 @@ const CookieBanner = () => {
                         onChange={(e) => setCookies(prev => ({ ...prev, analytics: e.target.checked }))}
                         className="sr-only peer"
                       />
-                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
+                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
                     </label>
                   </div>
 
@@ -172,7 +172,7 @@ const CookieBanner = () => {
                         onChange={(e) => setCookies(prev => ({ ...prev, marketing: e.target.checked }))}
                         className="sr-only peer"
                       />
-                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-primary-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-600"></div>
+                      <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
                     </label>
                   </div>
                 </div>
@@ -182,7 +182,7 @@ const CookieBanner = () => {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={acceptSelected}
-                    className="bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg transition-all duration-300"
+                    className="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-6 py-2 rounded-full font-semibold text-sm hover:shadow-lg transition-all duration-300"
                   >
                     Enregistrer mes choix
                   </motion.button>

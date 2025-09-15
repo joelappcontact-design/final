@@ -6,21 +6,21 @@ import { Key, Lock, Shield, Clock, CheckCircle, Star } from 'lucide-react';
 const Services = () => {
   const services = [
     {
-      icon: <Key className="w-12 h-12 text-primary-600" />,
+      icon: <Key className="w-12 h-12 text-blue-600" />,
       title: 'Ouverture de porte',
       description: 'Déblocage rapide et sécurisé de tous types de serrures',
       features: ['Serrure bloquée', 'Clé cassée', 'Urgence 24h/24'],
       price: 'À partir de 39€'
     },
     {
-      icon: <Lock className="w-12 h-12 text-primary-600" />,
+      icon: <Lock className="w-12 h-12 text-blue-600" />,
       title: 'Changement de serrure',
       description: 'Remplacement et installation de nouvelles serrures',
       features: ['Sécurité renforcée', 'Clés multiples', 'Garantie 2 ans'],
       price: 'À partir de 89€'
     },
     {
-      icon: <Shield className="w-12 h-12 text-primary-600" />,
+      icon: <Shield className="w-12 h-12 text-blue-600" />,
       title: 'Sécurisation',
       description: 'Renforcement de la sécurité de votre habitation',
       features: ['Diagnostic sécurité', 'Solutions sur mesure', 'Devis gratuit'],
@@ -30,17 +30,17 @@ const Services = () => {
 
   const whyChooseUs = [
     {
-      icon: <Clock className="w-8 h-8 text-primary-600" />,
+      icon: <Clock className="w-8 h-8 text-blue-600" />,
       title: 'Intervention rapide',
       description: 'Arrivée en 30-45 minutes partout en Île-de-France'
     },
     {
-      icon: <CheckCircle className="w-8 h-8 text-primary-600" />,
+      icon: <CheckCircle className="w-8 h-8 text-blue-600" />,
       title: 'Artisans certifiés',
       description: 'Professionnels vérifiés et assurés'
     },
     {
-      icon: <Star className="w-8 h-8 text-primary-600" />,
+      icon: <Star className="w-8 h-8 text-blue-600" />,
       title: 'Service 24h/24',
       description: 'Disponible tous les jours de l\'année'
     }

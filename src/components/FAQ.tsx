@@ -124,9 +124,9 @@ const FAQ = () => {
                           transition={{ duration: 0.2 }}
                         >
                           {isOpen ? (
-                            <Minus className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                            <Minus className="w-5 h-5 text-blue-600 flex-shrink-0" />
                           ) : (
-                            <Plus className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                            <Plus className="w-5 h-5 text-blue-600 flex-shrink-0" />
                           )}
                         </motion.div>
                       </button>
@@ -162,18 +162,18 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="mt-16 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-500 to-primary-700 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Vous avez d'autres questions ?
             </h3>
-            <p className="text-primary-100 mb-6">
+            <p className="text-blue-100 mb-6">
               Notre équipe est là pour vous aider. Contactez-nous directement.
             </p>
             <motion.a
               href="tel:0756902112"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+              className="inline-flex items-center space-x-2 bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
             >
               <span>Appeler maintenant</span>
             </motion.a>

@@ -66,10 +66,10 @@ const PartnersBanner = () => {
                 className="flex-shrink-0 w-48 h-24 flex items-center justify-center bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
               >
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-primary-600 mb-1">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">
                     {partner.name}
                   </div>
-                  <div className="w-16 h-1 bg-gradient-to-r from-primary-500 to-primary-700 mx-auto rounded-full"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
                 </div>
               </motion.div>
             ))}
@@ -86,9 +86,9 @@ const PartnersBanner = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
-                  ? 'bg-primary-600 scale-125'
+                  ? 'bg-blue-600 scale-125'
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
             />

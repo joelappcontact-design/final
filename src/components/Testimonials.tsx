@@ -69,7 +69,7 @@ const Testimonials = () => {
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 relative"
             >
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-primary-100">
+              <div className="absolute top-6 right-6 text-blue-100">
                 <Quote className="w-8 h-8" />
               </div>
 
@@ -84,13 +84,13 @@ const Testimonials = () => {
               </p>
 
               {/* Service Badge */}
-              <div className="inline-block bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              <div className="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
                 {testimonial.service}
               </div>
 
               {/* Client Info */}
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white font-bold">
                   {testimonial.name.split(' ').map(n => n[0]).join('')}
                 </div>
                 <div>
@@ -116,19 +116,19 @@ const Testimonials = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-600">Clients satisfaits</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">30min</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">30min</div>
               <div className="text-gray-600">Temps moyen</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">24h/24</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">24h/24</div>
               <div className="text-gray-600">Disponibilité</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary-600 mb-2">5★</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">5★</div>
               <div className="text-gray-600">Note moyenne</div>
             </div>
           </div>
