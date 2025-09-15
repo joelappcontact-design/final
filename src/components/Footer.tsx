@@ -39,9 +39,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-black text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <motion.div
@@ -52,14 +52,14 @@ const Footer = () => {
             className="lg:col-span-1"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 bg-black rounded-sm"></div>
+              <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                <div className="w-6 h-6 bg-white rounded-sm"></div>
               </div>
-              <span className="text-xl font-medium">
+              <span className="text-2xl font-bold">
                 Serrurier Français
               </span>
             </div>
-            <p className="text-gray-400 mb-8 leading-relaxed">
+            <p className="text-gray-400 mb-8 leading-relaxed text-lg">
               Votre serrurier d'urgence de confiance en Île-de-France. 
               Intervention rapide, artisans certifiés, service 24h/24.
             </p>
@@ -73,7 +73,7 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-lg font-medium mb-6">Contact</h3>
+            <h3 className="text-xl font-bold mb-6">Contact</h3>
             <div className="space-y-4">
               {contactInfo.map((item, index) => (
                 <a
@@ -84,7 +84,7 @@ const Footer = () => {
                   <div className="text-gray-500 group-hover:text-white transition-colors duration-300">
                     {item.icon}
                   </div>
-                  <span>{item.text}</span>
+                  <span className="text-lg">{item.text}</span>
                 </a>
               ))}
             </div>
@@ -98,13 +98,13 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-lg font-medium mb-6">Services</h3>
-            <div className="grid grid-cols-1 gap-2">
+            <h3 className="text-xl font-bold mb-6">Services</h3>
+            <div className="grid grid-cols-1 gap-3">
               {services.map((service, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  className="text-gray-400 hover:text-white transition-colors duration-300 text-lg"
                 >
                   {service}
                 </a>
@@ -120,23 +120,23 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-lg font-medium mb-6">Urgence ?</h3>
-            <div className="space-y-4">
+            <h3 className="text-xl font-bold mb-6">Urgence ?</h3>
+            <div className="space-y-6">
               <motion.a
                 href="tel:0756902112"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="flex items-center justify-center space-x-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-5 h-5" />
                 <span>Appeler maintenant</span>
               </motion.a>
               
               <div className="text-center">
-                <div className="text-2xl font-semibold text-white mb-1">
+                <div className="text-3xl font-bold text-white mb-2">
                   07 56 90 21 12
                 </div>
-                <div className="text-gray-400 text-sm">
+                <div className="text-gray-400 text-lg">
                   Appel gratuit
                 </div>
               </div>
@@ -147,20 +147,20 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="max-w-6xl mx-auto px-6 py-6">
+        <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-gray-400">
+            <div className="text-gray-400 text-lg">
               © {currentYear} Serrurier Français - Tous droits réservés
             </div>
             
             <div className="flex space-x-8">
-              <a href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="/mentions-legales" className="text-gray-400 hover:text-white transition-colors duration-300 text-lg">
                 Mentions légales
               </a>
-              <a href="/politique-confidentialite" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="/politique-confidentialite" className="text-gray-400 hover:text-white transition-colors duration-300 text-lg">
                 Politique de confidentialité
               </a>
-              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-300">
+              <a href="/cookies" className="text-gray-400 hover:text-white transition-colors duration-300 text-lg">
                 Cookies
               </a>
             </div>

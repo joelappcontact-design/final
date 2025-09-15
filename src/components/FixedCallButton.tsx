@@ -20,7 +20,7 @@ const FixedCallButton = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-4 z-50">
       <AnimatePresence>
         {isExpanded && (
           <motion.div
@@ -28,10 +28,10 @@ const FixedCallButton = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="mb-4 bg-white/95 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-gray-200"
+            className="mb-4 bg-white rounded-2xl p-6 shadow-2xl border border-gray-200 max-w-xs"
           >
             <div className="flex items-center justify-between mb-4">
-              <h3 className="text-lg font-medium text-black">Besoin d'aide ?</h3>
+              <h3 className="text-lg font-bold text-gray-900">Besoin d'aide ?</h3>
               <button
                 onClick={() => setIsExpanded(false)}
                 className="text-gray-400 hover:text-gray-600 transition-colors duration-200"
@@ -45,7 +45,7 @@ const FixedCallButton = () => {
                 href="tel:0756902112"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                className="flex items-center space-x-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Phone className="w-5 h-5" />
                 <span>Appeler maintenant</span>
@@ -55,7 +55,7 @@ const FixedCallButton = () => {
                 href="https://wa.me/0756902112"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+                className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>WhatsApp</span>
@@ -69,9 +69,9 @@ const FixedCallButton = () => {
         onClick={() => setIsExpanded(!isExpanded)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300"
+        className="w-16 h-16 bg-yellow-400 hover:bg-yellow-500 rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300"
       >
-        <Phone className="w-6 h-6 text-white" />
+        <Phone className="w-8 h-8 text-gray-900" />
       </motion.button>
     </div>
   );
