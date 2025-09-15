@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieBanner from '@/components/CookieBanner';
 import SchemaLocalBusiness from '@/components/SchemaLocalBusiness';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 import CallButton from '@/components/CallButton';
 import { config } from '@/lib/config';
 
@@ -100,12 +100,48 @@ export default function RootLayout({
         <meta name="theme-color" content="#6B4EFF" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5LM2SGGT"
+            height="0"
+            width="0"
+            style={{display:'none',visibility:'hidden'}}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        
         {/* Ahrefs Analytics */}
-        <script 
-          src="https://analytics.ahrefs.com/analytics.js" 
-          data-key="VjubS7Tiwo6c5RrnOOvDvw" 
-          async
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="VjubS7Tiwo6c5RrnOOvDvw"
+          strategy="afterInteractive"
         />
+        
+        {/* Google Ads + Consent Mode v2 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=AW-17551229588`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-consent" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            // Consent Mode v2 par défaut (ajuste selon ton CMP)
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              functionality_storage: 'granted',
+              security_storage: 'granted'
+            });
+            gtag('js', new Date());
+            gtag('config', 'AW-17551229588', {
+              allow_enhanced_conversions: true
+            });
+          `}
+        </Script>
         
         {/* Google Tag Manager */}
         <script dangerouslySetInnerHTML={{
@@ -129,7 +165,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         
-        <GoogleAnalytics />
         <Header />
         <main className="min-h-screen">
           {children}
