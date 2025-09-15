@@ -47,20 +47,34 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <section className="py-32 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+             className="absolute w-2 h-2 bg-blue-400/10 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Why Choose Us */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-24"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Pourquoi nous choisir ?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-white/80 max-w-4xl mx-auto mb-16">
             Des professionnels à votre service pour tous vos besoins en serrurerie
           </p>
 
@@ -72,18 +86,18 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="text-center p-6 rounded-2xl hover:shadow-lg transition-all duration-300"
+                whileHover={{ scale: 1.05, y: -8 }}
+                 className="glass text-center p-8 rounded-3xl hover:bg-blue-500/20 transition-all duration-500 shadow-apple"
               >
-                <div className="flex justify-center mb-4">
-                  <div className="w-16 h-16 bg-primary-50 rounded-full flex items-center justify-center">
+                <div className="flex justify-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
                     {item.icon}
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <h3 className="text-2xl font-bold text-white mb-4">
                   {item.title}
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-white/80 text-lg">
                   {item.description}
                 </p>
               </motion.div>
@@ -99,10 +113,10 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Nos Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+          <p className="text-xl text-white/80 max-w-4xl mx-auto mb-16">
             Des solutions complètes pour tous vos problèmes de serrurerie
           </p>
 
@@ -114,41 +128,41 @@ const Services = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                whileHover={{ scale: 1.05, y: -10 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
+                whileHover={{ scale: 1.05, y: -12 }}
+                className="glass rounded-3xl shadow-apple-lg hover:shadow-apple-lg transition-all duration-500 overflow-hidden border border-white/20"
               >
-                <div className="p-8">
-                  <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full flex items-center justify-center text-white">
+                <div className="p-10">
+                  <div className="flex justify-center mb-8">
+                     <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl flex items-center justify-center text-white shadow-apple">
                       {service.icon}
                     </div>
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-3xl font-bold text-white mb-6">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-600 mb-6">
+                  <p className="text-white/80 mb-8 text-lg">
                     {service.description}
                   </p>
 
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-4 mb-8">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</span>
+                      <div key={featureIndex} className="flex items-center space-x-4">
+                         <CheckCircle className="w-6 h-6 text-yellow-400 flex-shrink-0" />
+                        <span className="text-white/90 text-lg">{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 mb-4">
+                     <div className="text-4xl font-bold text-yellow-400 mb-6">
                       {service.price}
                     </div>
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-full bg-gradient-to-r from-primary-500 to-primary-700 text-white py-3 px-6 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+                       className="btn-apple w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-4 px-8 rounded-2xl font-semibold text-lg shadow-apple"
                     >
                       Demander un devis
                     </motion.button>

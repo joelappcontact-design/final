@@ -45,9 +45,23 @@ const Footer = () => {
   ];
 
   return (
-    <footer id="contact" className="bg-gray-900 text-white">
+     <footer className="bg-gradient-to-b from-slate-900 to-slate-800 text-white relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0">
+        {[...Array(10)].map((_, i) => (
+          <div
+            key={i}
+             className="absolute w-2 h-2 bg-blue-400/5 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <motion.div
@@ -57,27 +71,32 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-                <Key className="w-6 h-6 text-white" />
+            <div className="flex items-center space-x-3 mb-8">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
+                <Key className="w-7 h-7 text-white" />
               </div>
-              <span className="text-xl font-bold">
-                Serrurierfrancais.com
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">
+                  SERRURIER FRANÇAIS
+                </span>
+                <span className="text-xs text-blue-300">.com</span>
+              </div>
             </div>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-white/80 mb-8 leading-relaxed text-lg">
               Votre serrurier d'urgence de confiance en Île-de-France. 
               Intervention rapide, artisans certifiés, service 24h/24.
             </p>
             
             {/* Trust Badges */}
-            <div className="space-y-3">
+            <div className="space-y-4">
               {trustBadges.map((badge, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="text-primary-400">
-                    {badge.icon}
+                <div key={index} className="flex items-center space-x-4">
+                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
+                    <div className="text-white">
+                      {badge.icon}
+                    </div>
                   </div>
-                  <span className="text-gray-300">{badge.text}</span>
+                  <span className="text-white/80 text-lg font-medium">{badge.text}</span>
                 </div>
               ))}
             </div>
@@ -91,18 +110,20 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Contact</h3>
-            <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-8 text-white">Contact</h3>
+            <div className="space-y-6">
               {contactInfo.map((item, index) => (
                 <a
                   key={index}
                   href={item.href}
-                  className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                  className="flex items-center space-x-4 text-white/80 hover:text-white transition-colors duration-300 group"
                 >
-                  <div className="text-primary-400">
-                    {item.icon}
+                   <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-white">
+                      {item.icon}
+                    </div>
                   </div>
-                  <span>{item.text}</span>
+                  <span className="text-lg">{item.text}</span>
                 </a>
               ))}
             </div>
@@ -116,13 +137,13 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Services</h3>
-            <div className="grid grid-cols-1 gap-2">
+            <h3 className="text-2xl font-bold mb-8 text-white">Services</h3>
+            <div className="grid grid-cols-1 gap-3">
               {services.map((service, index) => (
                 <a
                   key={index}
                   href="#"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  className="text-white/80 hover:text-white transition-colors duration-300 text-lg hover:translate-x-2 transform transition-transform"
                 >
                   {service}
                 </a>
@@ -138,23 +159,23 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-xl font-bold mb-6">Urgence ?</h3>
-            <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-8 text-white">Urgence ?</h3>
+            <div className="space-y-6">
               <motion.a
                 href="tel:0756902112"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+                 className="btn-apple flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-lg shadow-apple-lg"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 <span>Appeler maintenant</span>
               </motion.a>
               
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-400 mb-1">
+                 <div className="text-3xl font-bold text-yellow-400 mb-2">
                   07 56 90 21 12
                 </div>
-                <div className="text-sm text-gray-400">
+                <div className="text-white/60 text-lg">
                   Appel gratuit
                 </div>
               </div>
@@ -164,21 +185,21 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Serrurierfrancais.com - Tous droits réservés
+            <div className="text-white/60 text-lg">
+              © {currentYear} SERRURIER FRANÇAIS.com - Tous droits réservés
             </div>
             
-            <div className="flex space-x-6 text-sm">
-              <a href="#mentions-legales" className="text-gray-400 hover:text-white transition-colors duration-200">
+            <div className="flex space-x-8 text-lg">
+              <a href="#mentions-legales" className="text-white/60 hover:text-white transition-colors duration-300">
                 Mentions légales
               </a>
-              <a href="#politique-confidentialite" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#politique-confidentialite" className="text-white/60 hover:text-white transition-colors duration-300">
                 Politique de confidentialité
               </a>
-              <a href="#cookies" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="#cookies" className="text-white/60 hover:text-white transition-colors duration-300">
                 Cookies
               </a>
             </div>

@@ -28,9 +28,9 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'glass backdrop-blur-md shadow-lg'
+          ? 'glass-dark backdrop-blur-xl shadow-apple-lg'
           : 'bg-transparent'
       }`}
     >
@@ -39,14 +39,17 @@ const Header = () => {
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
-            className="flex items-center space-x-2"
+            className="flex items-center space-x-3"
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
-              <Key className="w-6 h-6 text-white" />
+             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center shadow-apple">
+              <Key className="w-7 h-7 text-white" />
             </div>
-            <span className="text-xl lg:text-2xl font-bold text-gray-900">
-              Serrurierfrancais.com
-            </span>
+            <div className="flex flex-col">
+              <span className="text-lg lg:text-xl font-bold text-white">
+                SERRURIER FRANÇAIS
+              </span>
+               <span className="text-xs text-blue-300">.com</span>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -56,7 +59,7 @@ const Header = () => {
                 key={item.name}
                 href={item.href}
                 whileHover={{ scale: 1.05 }}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                className="text-white/80 hover:text-white font-medium transition-colors duration-300 text-lg"
               >
                 {item.name}
               </motion.a>
@@ -68,7 +71,7 @@ const Header = () => {
             href="tel:0756902112"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden lg:flex items-center space-x-2 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+             className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-apple hover:shadow-apple-lg transition-all duration-300"
           >
             <Phone className="w-5 h-5" />
             <span>Appeler maintenant</span>
@@ -77,7 +80,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+            className="lg:hidden p-3 rounded-2xl text-white hover:bg-white/10 transition-colors duration-300"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -95,22 +98,22 @@ const Header = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden glass rounded-lg mt-2 p-4"
+              className="lg:hidden glass-dark rounded-3xl mt-4 p-6 shadow-apple-lg"
             >
-              <nav className="flex flex-col space-y-4">
+              <nav className="flex flex-col space-y-6">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200"
+                    className="text-white/80 hover:text-white font-medium transition-colors duration-300 text-lg"
                   >
                     {item.name}
                   </a>
                 ))}
                 <a
                   href="tel:0756902112"
-                  className="flex items-center justify-center space-x-2 bg-gradient-to-r from-primary-500 to-primary-700 text-white px-6 py-3 rounded-full font-semibold shadow-lg"
+                   className="flex items-center justify-center space-x-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white px-8 py-4 rounded-2xl font-semibold shadow-apple"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Appeler maintenant</span>
