@@ -1,103 +1,96 @@
-/**
- * Types TypeScript pour l'application
- */
-
-export interface PriceCard {
-  id: string;
-  title: string;
-  price: number;
-  description: string;
-  features: string[];
-  popular?: boolean;
+export interface CallButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export interface Testimonial {
+export interface PhoneButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export interface StatItem {
+  id: string;
+  number: number;
+  suffix: string;
+  label: string;
+  icon?: React.ReactNode;
+}
+
+export interface StatsCounterProps {
+  stats: StatItem[];
+  className?: string;
+}
+
+export interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+export interface ProcessStepsProps {
+  steps: ProcessStep[];
+  className?: string;
+}
+
+export interface TeamMember {
   id: string;
   name: string;
-  rating: number;
-  comment: string;
-  location: string;
-  date: string;
+  role: string;
+  experience: string;
+  image: string;
+  description: string;
+  phone: string;
 }
 
-export interface FAQ {
+export interface TeamSectionProps {
+  teamMember: TeamMember;
+  className?: string;
+}
+
+export interface InsurancePartner {
+  name: string;
+  website?: string;
+}
+
+export interface InsurancePartnersProps {
+  partners: InsurancePartner[];
+  className?: string;
+}
+
+export interface FAQItem {
   id: string;
   question: string;
   answer: string;
   category: 'general' | 'pricing' | 'service' | 'emergency';
 }
 
-export interface City {
+export interface FAQProps {
+  faqs: FAQItem[];
+  className?: string;
+}
+
+export interface CityContent {
   name: string;
-  slug: string;
   description: string;
-  estimatedTime: string;
   zones: string[];
-}
-
-export interface ContactForm {
-  name: string;
-  phone: string;
-  email?: string;
-  message?: string;
-  city?: string;
-  honeypot?: string; // Pour la protection anti-spam
-}
-
-export interface LocalBusinessSchema {
-  '@context': string;
-  '@type': string;
-  name: string;
-  description: string;
-  url: string;
-  telephone: string;
-  email: string;
-  address: {
-    '@type': string;
-    streetAddress: string;
-    addressLocality: string;
-    postalCode: string;
-    addressCountry: string;
+  landmarks: string[];
+  pricing: {
+    simpleOpening: string;
+    complexOpening: string;
+    cylinderChange: string;
   };
-  geo: {
-    '@type': string;
-    latitude: number;
-    longitude: number;
-  };
-  openingHours: string[];
-  serviceArea: {
-    '@type': string;
-    geoWithin: {
-      '@type': string;
-      name: string;
-    };
-  };
-  priceRange: string;
-  paymentAccepted: string[];
-  currenciesAccepted: string;
-  hasOfferCatalog: {
-    '@type': string;
+  testimonials: {
     name: string;
-    itemListElement: Array<{
-      '@type': string;
-      itemOffered: {
-        '@type': string;
-        name: string;
-        description: string;
-      };
-    }>;
-  };
-}
-
-export interface FAQSchema {
-  '@context': string;
-  '@type': string;
-  mainEntity: Array<{
-    '@type': string;
-    name: string;
-    acceptedAnswer: {
-      '@type': string;
-      text: string;
-    };
-  }>;
+    text: string;
+    rating: number;
+  }[];
+  faq: {
+    question: string;
+    answer: string;
+  }[];
 }
