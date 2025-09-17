@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { config } from '@/lib/config';
-import CallButton from './CallButton';
 
 export default function Footer() {
   return (
@@ -22,13 +21,12 @@ export default function Footer() {
             </div>
             <div className="text-blue-300 text-sm mb-4">Disponible 24/7</div>
             <div className="text-blue-300 text-sm mb-6">Intervention en 30–45 min</div>
-            <CallButton
-              phoneNumber={config.phone.replace(/\s/g, '')}
-              variant="primary"
-              size="md"
+            <a
+              href={`tel:${config.phone.replace(/\s/g, '')}`}
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#1e3a8a] to-[#60a5fa] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
             >
               Appeler {config.phoneDisplay}
-            </CallButton>
+            </a>
           </div>
 
           {/* Liens rapides */}

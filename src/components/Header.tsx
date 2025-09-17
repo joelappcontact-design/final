@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Clock } from 'lucide-react';
 import { config } from '@/lib/config';
-import CallButton from './CallButton';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,13 +67,12 @@ export default function Header() {
                 <span>Disponible 24h/24</span>
               </div>
             </div>
-            <CallButton 
-              phoneNumber={config.phone.replace(/\s/g, '')} 
-              variant="primary" 
-              size="md"
+            <a
+              href={`tel:${config.phone.replace(/\s/g, '')}`}
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#1e3a8a] to-[#60a5fa] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
             >
               Appeler
-            </CallButton>
+            </a>
           </div>
 
           {/* Menu Mobile */}
@@ -111,14 +109,12 @@ export default function Header() {
                 <Clock size={14} />
                 <span>Disponible 24h/24</span>
               </div>
-              <CallButton 
-                phoneNumber={config.phone.replace(/\s/g, '')} 
-                variant="primary" 
-                size="md" 
-                className="w-full justify-center"
+              <a
+                href={`tel:${config.phone.replace(/\s/g, '')}`}
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-[#1e3a8a] to-[#60a5fa] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Appeler maintenant
-              </CallButton>
+              </a>
             </div>
           </div>
         )}
