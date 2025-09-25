@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import dynamic from 'next/dynamic';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -70,6 +71,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const PhoneConversionListener = dynamic(() => import('./PhoneConversionListener'), { ssr: false });
   return (
     <html lang="fr" className={inter.variable}>
       <head>
@@ -85,6 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
+        <PhoneConversionListener />
         <noscript
           dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID || 'GTM-XXXXXXX'}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
