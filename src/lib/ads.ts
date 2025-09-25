@@ -42,7 +42,6 @@ export function reportPhoneConversion(params: ConversionParams = {}): void {
 
   if (typeof window.gtag === 'function') {
     // Use gtag if available
-    // @ts-expect-error - gtag typing is optional
     window.gtag('event', 'conversion', {
       send_to: sendTo,
       value,
