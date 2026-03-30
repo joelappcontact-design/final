@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Shield, Award, Users, Phone } from 'lucide-react';
+import { Clock, Shield, Award, Users, Phone } from 'lucide-react';
 
 const reasons = [
   {
