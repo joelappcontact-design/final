@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Phone, Menu, X, Clock, Shield } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Phone, Menu, X, Key } from 'lucide-react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,7 +12,6 @@ const Header = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -25,68 +24,42 @@ const Header = () => {
 
   return (
     <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg'
-          : 'bg-transparent'
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-transparent backdrop-blur-xl border-b border-gray-200/50 shadow-sm' 
+          : 'bg-transparent backdrop-blur-lg'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-24">
-          {/* Logo */}
-          <motion.div
+      <div className="container-apple">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo avec dégradé */}
+          <motion.a
+            href="#accueil"
             whileHover={{ scale: 1.02 }}
-            className="flex items-center space-x-4"
+            whileTap={{ scale: 0.98 }}
+            className="flex items-center space-x-3 group"
           >
-            <div className="relative">
-              <div className="w-14 h-14 bg-gray-900 rounded-xl flex items-center justify-center">
-                <div className="w-7 h-7 bg-white rounded-sm"></div>
-              </div>
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
+            <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-xl flex items-center justify-center">
+              <Key className="w-5 h-5 text-white" />
             </div>
-            <div className="hidden sm:block">
-              <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
-                SERRURIER FRANCAIS.COM
-              </span>
+            <div className="text-2xl font-black bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-blue-400 transition-all duration-300">
+              serrurierfrancais.com
             </div>
-          </motion.div>
+          </motion.a>
 
-          {/* Info Icons */}
-          <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-3">
-              <Clock className={`w-6 h-6 ${isScrolled ? 'text-blue-600' : 'text-yellow-300'}`} />
-              <span className={`text-lg font-semibold ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-                30-45 min
-              </span>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Shield className={`w-6 h-6 ${isScrolled ? 'text-blue-600' : 'text-yellow-300'}`} />
-              <span className={`text-lg font-semibold ${isScrolled ? 'text-gray-700' : 'text-white'}`}>
-                Certifié
-              </span>
-            </div>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-10">
+          {/* Navigation Desktop */}
+          <nav className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.a
+              <a
                 key={item.name}
                 href={item.href}
-                whileHover={{ scale: 1.05 }}
-                className={`font-semibold text-lg transition-colors duration-300 ${
-                  isScrolled 
-                    ? 'text-gray-700 hover:text-blue-600' 
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200"
               >
                 {item.name}
-              </motion.a>
+              </a>
             ))}
           </nav>
 
@@ -95,62 +68,61 @@ const Header = () => {
             href="tel:0756902112"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden sm:flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl border border-blue-500"
+            className="hidden lg:flex items-center space-x-2 bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-200"
           >
-            <Phone className="w-6 h-6" />
-            <span>Appeler 07 56 90 21 12</span>
+            <Phone className="w-4 h-4" />
+            <span>07 56 90 21 12</span>
           </motion.a>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`lg:hidden p-3 rounded-xl transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-gray-700 hover:bg-gray-100' 
-                : 'text-white hover:bg-white/10'
-            }`}
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
           >
             {isMobileMenuOpen ? (
-              <X className="w-7 h-7" />
+              <X className="w-6 h-6" />
             ) : (
-              <Menu className="w-7 h-7" />
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white/95 backdrop-blur-xl rounded-2xl mt-4 p-8 shadow-2xl border border-gray-200"
-            >
-              <nav className="flex flex-col space-y-6">
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-gray-200/50"
+          >
+            <div className="container-apple py-6">
+              <nav className="flex flex-col space-y-4 mb-6">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-300 text-xl py-3"
+                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 py-2"
                   >
                     {item.name}
                   </a>
                 ))}
-                <a
-                  href="tel:0756902112"
-                  className="flex items-center justify-center space-x-3 bg-blue-600 text-white px-8 py-5 rounded-xl font-bold text-xl shadow-lg mt-6"
-                >
-                  <Phone className="w-6 h-6" />
-                  <span>Appeler 07 56 90 21 12</span>
-                </a>
               </nav>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+              <a
+                href="tel:0756902112"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center space-x-2 bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow-lg"
+              >
+                <Phone className="w-4 h-4" />
+                <span>07 56 90 21 12</span>
+              </a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 };
